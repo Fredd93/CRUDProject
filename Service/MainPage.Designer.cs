@@ -28,18 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
             SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(265, 89);
+            label1.Name = "label1";
+            label1.Size = new Size(126, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Connection failed";
             // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Name = "MainPage";
             Text = "Main Page";
+            Load += MainPage_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
     }
 }

@@ -1,3 +1,4 @@
+using Model;
 namespace Service
 {
     public partial class MainPage : Form
@@ -5,6 +6,15 @@ namespace Service
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+            ModelClass test = new ModelClass();
+            if (test.DALTest())
+            {
+                label1.Text = "Success";
+            }
         }
     }
 }
