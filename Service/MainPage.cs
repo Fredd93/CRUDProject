@@ -16,5 +16,10 @@ namespace Service
                 label1.Text = "Success";
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
