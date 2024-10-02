@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model
+namespace Model.Enums
 {
-    public enum Roles
+    internal enum Status
     {
-        none,
-        servicedeskemployee,
-        employee,
+        open,
+        solved,
+        closed
     }
 }
