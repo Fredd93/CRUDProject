@@ -69,6 +69,10 @@ namespace Forms_UI
             for (int i = 0; i < values.Length; i++)
             {
                 sweepAngle = (values[i] / total) * 360; // Calculate angle based on value
+
+                //sweepAngle = (values[i] / total) * 180; //for a half size pie graph
+                //sweepAngle *= -1;
+
                 using (Brush brush = new SolidBrush(colors[i]))
                 {
                     e.Graphics.FillPie(brush, pieRect, startAngle, sweepAngle);
@@ -77,7 +81,8 @@ namespace Forms_UI
             }
 
             // Optional: Draw an outline around the pie chart
-            e.Graphics.DrawEllipse(Pens.Black, pieRect);
+            Pen pen = new Pen(Color.LightGray, 3);
+            e.Graphics.DrawEllipse(pen, pieRect);
         }
     }
 }

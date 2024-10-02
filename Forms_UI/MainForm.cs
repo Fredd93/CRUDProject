@@ -15,6 +15,10 @@ namespace Forms_UI
         public MainForm()
         {
             InitializeComponent();
+            PieChart chart = new PieChart();
+            this.Controls.Add(chart);
+            chart.Colors = new Color[] { Color.Salmon, Color.Orange, Color.Lime };
+            chart.Values = new float[] { 10, 20, 40 };
         }
     }
 }

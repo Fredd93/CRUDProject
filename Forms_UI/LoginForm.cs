@@ -5,8 +5,14 @@ namespace Forms_UI
         public LoginForm()
         {
             InitializeComponent();
-            MainForm mainForm = new MainForm();
+            
+        }
 
+        public void LoginBtn_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = new MainForm();
+            this.Hide();
+            mainForm.Show();
         }
     }
 }
