@@ -11,7 +11,7 @@
         "projectName": "Model",
         "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\daanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\obj\\",
+        "outputPath": "C:\\Users\\daanp\\Source\\Repos\\CRUDProject\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\daanp\\AppData\\Roaming\\NuGet\\NuGet.Config",

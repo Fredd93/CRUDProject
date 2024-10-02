@@ -856,9 +856,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\UI\\UI.csproj",
-      "projectName": "UI",
-      "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj",
+      "projectName": "Console_UI",
+      "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj",
       "packagesPath": "C:\\Users\\daanp\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\UI\\obj\\",
       "projectStyle": "PackageReference",
