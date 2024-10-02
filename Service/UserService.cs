@@ -21,5 +21,9 @@ namespace Service
         {
             return userdb.READUser(name);
         }
+        public User GetUserByUsername(string username)
+        {
+            return userdb.READUserByUsername(username);
+        }
     }
 }

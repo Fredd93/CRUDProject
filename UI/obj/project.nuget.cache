@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mdSdx9R9Rkk=",
+  "dgSpecHash": "uKhla3fwsFA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\UI\\Console_UI.csproj",
+  "projectFilePath": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mahmoud\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Mahmoud\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
