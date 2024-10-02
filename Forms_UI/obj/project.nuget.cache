@@ -4,5 +4,12 @@
   "success": true,
   "projectFilePath": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file F:\\2.1 Project\\CRUDProject\\Forms_UI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
