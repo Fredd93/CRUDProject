@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\daanp\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj": {}
+    "C:\\Users\\semel\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\daanp\\source\\repos\\CRUDProject\\DAL\\DAL.csproj": {
+    "C:\\Users\\semel\\source\\repos\\CRUDProject\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\semel\\source\\repos\\CRUDProject\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\daanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\semel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\daanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\semel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj"
+              "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj"
               }
             }
           }
@@ -75,17 +74,17 @@
         }
       }
     },
-    "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
+    "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\daanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daanp\\Source\\Repos\\CRUDProject\\Model\\obj\\",
+        "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\semel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\daanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\semel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +92,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -142,17 +140,17 @@
         }
       }
     },
-    "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Service\\Service.csproj": {
+    "C:\\Users\\semel\\source\\repos\\CRUDProject\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\daanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Service\\obj\\",
+        "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\semel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\daanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\semel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -160,18 +158,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\daanp\\source\\repos\\CRUDProject\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\DAL\\DAL.csproj"
+              "C:\\Users\\semel\\source\\repos\\CRUDProject\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj"
+              "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj"
               }
             }
           }
@@ -216,17 +213,17 @@
         }
       }
     },
-    "C:\\Users\\daanp\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj": {
+    "C:\\Users\\semel\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj",
+        "projectUniqueName": "C:\\Users\\semel\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj",
         "projectName": "Console_UI",
-        "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj",
-        "packagesPath": "C:\\Users\\daanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\UI\\obj\\",
+        "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj",
+        "packagesPath": "C:\\Users\\semel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\daanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\semel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -234,18 +231,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj"
+              "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj"
               },
-              "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Service\\Service.csproj"
+              "C:\\Users\\semel\\source\\repos\\CRUDProject\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Service\\Service.csproj"
               }
             }
           }

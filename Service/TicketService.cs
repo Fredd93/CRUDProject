@@ -14,7 +14,7 @@ namespace Service
 
         public TicketService() 
         {
-            ticketdb = new UserDAO();
+            ticketdb = new TicketDAO();
         }
     }
 }

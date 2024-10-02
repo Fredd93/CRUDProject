@@ -856,9 +856,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\semel\\source\\repos\\CRUDProject\\UI\\UI.csproj",
-      "projectName": "UI",
-      "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\semel\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj",
+      "projectName": "Console_UI",
+      "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\UI\\Console_UI.csproj",
       "packagesPath": "C:\\Users\\semel\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\UI\\obj\\",
       "projectStyle": "PackageReference",
