@@ -15,8 +15,13 @@ namespace Forms_UI
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void tabPageDashboard_Click(object sender, EventArgs e)
+        {
             PieChart chart = new PieChart();
-            this.Controls.Add(chart);
+            pnlUnresolvedIncidents.Controls.Add(chart);
+            pnlIncidentsPDeadline.Controls.Add(chart);
             chart.Colors = new Color[] { Color.Salmon, Color.Orange, Color.Lime };
             chart.Values = new float[] { 10, 20, 40 };
         }
