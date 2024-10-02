@@ -65,6 +65,8 @@ namespace Forms_UI
             // Get the bounding rectangle for the pie chart
             Rectangle pieRect = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
 
+            
+
             // Draw each slice of the pie
             for (int i = 0; i < values.Length; i++)
             {
@@ -79,10 +81,12 @@ namespace Forms_UI
                 }
                 startAngle += sweepAngle; // Move the start angle for the next slice
             }
-
+            int shift = 75;
+            Rectangle circle = new Rectangle(shift, shift, this.Width - shift*2, this.Height - shift*2);
+            Pen pen = new Pen(Color.White, 75);
+            e.Graphics.DrawEllipse(pen, circle);
             // Optional: Draw an outline around the pie chart
-            Pen pen = new Pen(Color.LightGray, 3);
-            e.Graphics.DrawEllipse(pen, pieRect);
+
         }
     }
 }
