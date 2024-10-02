@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\Forms_UI\\Forms_UI.csproj": {}
+    "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\Forms_UI\\Forms_UI.csproj": {
+    "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\Forms_UI\\Forms_UI.csproj",
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
         "projectName": "Forms_UI",
-        "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\Forms_UI\\Forms_UI.csproj",
-        "packagesPath": "C:\\Users\\Mahmoud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\Forms_UI\\obj\\",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

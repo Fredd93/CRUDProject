@@ -831,19 +831,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mahmoud\\.nuget\\packages\\": {}
+    "C:\\Users\\tabee\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\Service\\Service.csproj",
+      "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\Service\\Service.csproj",
-      "packagesPath": "C:\\Users\\Mahmoud\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\Service\\obj\\",
+      "projectPath": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj",
+      "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+      "outputPath": "F:\\2.1 Project\\CRUDProject\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -857,11 +857,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\DAL\\DAL.csproj"
+            "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj": {
+              "projectPath": "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\NoSQL project\\Model\\Model.csproj"
+            "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+              "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj"
             }
           }
         }
@@ -902,7 +902,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
