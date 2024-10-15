@@ -10,5 +10,8 @@
     <Compile Update="PieChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Usercontrols\TicketControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

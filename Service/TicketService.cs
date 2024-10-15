@@ -8,13 +8,17 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    internal class TicketService
+    public class TicketService
     {
         private TicketDAO ticketdb;
 
         public TicketService() 
         {
-            ticketdb = new UserDAO();
+            ticketdb = new TicketDAO();
+        }
+        public List<Ticket> GetAllTickets()
+        {
+            return ticketdb.GetAllTickets();
         }
     }
 }

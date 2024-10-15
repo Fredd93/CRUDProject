@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {}
+    "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj": {}
   },
   "projects": {
-    "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+    "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
-        "outputPath": "F:\\2.1 Project\\CRUDProject\\Model\\obj\\",
+        "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\semel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\semel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

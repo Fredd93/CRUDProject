@@ -141,6 +141,7 @@
             LoginBtn.TabIndex = 10;
             LoginBtn.Text = "Login";
             LoginBtn.UseVisualStyleBackColor = true;
+            LoginBtn.Click += LoginBtn_Click;
             // 
             // LoginForm
             // 
