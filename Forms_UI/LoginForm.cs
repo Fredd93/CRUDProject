@@ -5,7 +5,7 @@ namespace Forms_UI
         public LoginForm()
         {
             InitializeComponent();
-            
+
         }
 
         public void LoginBtn_Click(object sender, EventArgs e)
@@ -13,6 +13,11 @@ namespace Forms_UI
             MainForm mainForm = new MainForm();
             this.Hide();
             mainForm.Show();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

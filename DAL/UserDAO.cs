@@ -18,5 +18,16 @@ namespace DAL
             BsonDocument document = collection.Find(filter).First();
             return new User(document);
         }
+        public User READUserByUsername(string username)
+        {
+            IMongoCollection<BsonDocument> collection = this.READCollection("User");
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq("username", username);
+            BsonDocument document = collection.Find(filter).FirstOrDefault();
+            if (document == null)
+            {
+                return null;
+            }
+            return new User(document);
+        }
     }
 }
