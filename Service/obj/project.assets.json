@@ -831,19 +831,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tabee\\.nuget\\packages\\": {}
+    "C:\\Users\\semel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj",
+      "projectUniqueName": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj",
-      "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
-      "outputPath": "F:\\2.1 Project\\CRUDProject\\Service\\obj\\",
+      "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Service\\Service.csproj",
+      "packagesPath": "C:\\Users\\semel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\semel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -857,11 +857,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj": {
-              "projectPath": "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj"
+            "C:\\Users\\semel\\source\\repos\\CRUDProject\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\DAL\\DAL.csproj"
             },
-            "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
-              "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj"
+            "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\semel\\source\\repos\\CRUDProject\\Model\\Model.csproj"
             }
           }
         }
@@ -905,13 +905,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file F:\\2.1 Project\\CRUDProject\\Service\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

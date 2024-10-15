@@ -7,24 +7,35 @@ namespace UI
     {
         static void Main(string[] args)
         {
-            UserService userdb = new UserService();
-            Console.Write("Write the first name of an employee: ");
-            string firstname = Console.ReadLine();
-            try
+            List<Ticket> values = new List<Ticket>();
+            Console.WriteLine("What is your search query?");
+            string query = Console.ReadLine().ToLower(); //Make the query lowercase for simplicity,
+                                                         //also avoids having to look for both 'and' and 'AND'. Same with 'or' and 'OR'
+            query = query.Replace(", ", " or "); //turn every , into an 'or'. Other way around would work too
+            query = query.Replace(" & ", " and "); //turn every & into an 'and'. Other way around would work too
+            string[] splits = query.Split(" or "); //split the query into pieces to search for the different keywords
+            List<Ticket> results = new List<Ticket>();
+            foreach(string s in splits)
             {
-                User user = userdb.READUser(firstname);
-                Console.WriteLine("Found user!");
-                Console.WriteLine(user.First_Name + " " + user.Last_Name);
-                Console.WriteLine(user.Email);
-                Console.WriteLine(user.Role);
+                string[] searchKeywords = s.Split(" and "); //split any keywords with an 'and' in them
+                foreach (Ticket ticket in values)
+                {
+                    bool hasKeywords = true; 
+                    foreach (string keyword in searchKeywords)
+                    {
+                        string trimmedKeyword = keyword.Trim(); //remove trailing whitespace that could mess up the search
+                        if (!ticket.Title.ToLower().Contains(trimmedKeyword)) { hasKeywords = false; break; } //set to lowercase to avoid capitalization mistakes
+                    }
+                    if (hasKeywords && !results.Contains(ticket)) //if there isn't already a copy in the list,
+                                                                 //because the query has 2 keywords that apply
+                    {
+                        results.Add(ticket);
+                    }
+                }
             }
-            catch
-            {
-                Console.WriteLine("User '" + firstname + "' was not found!");
-            }
-            
-            
+            foreach (Ticket ticket in results) { Console.WriteLine(ticket.Title); }
             
         }
+        
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Enums
 {
-    internal enum Status
+    public enum Status
     {
         open,
         solved,

@@ -36,3 +36,45 @@ F:\2.1 Project\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\refint\Forms_UI.dll
 F:\2.1 Project\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.pdb
 F:\2.1 Project\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.genruntimeconfig.cache
 F:\2.1 Project\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\ref\Forms_UI.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Forms_UI.exe
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Forms_UI.deps.json
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Forms_UI.runtimeconfig.json
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Forms_UI.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Forms_UI.pdb
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.LoginForm.resources
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.MainForm.resources
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.PieChart.resources
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.csproj.GenerateResource.cache
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.AssemblyInfoInputs.cache
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.AssemblyInfo.cs
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.csproj.CoreCompileInputs.cache
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.sourcelink.json
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\refint\Forms_UI.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.pdb
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.genruntimeconfig.cache
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\ref\Forms_UI.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.csproj.AssemblyReference.cache
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.Usercontrols.TicketControl.resources
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\AWSSDK.Core.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\AWSSDK.SecurityToken.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\DnsClient.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\MongoDB.Bson.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\MongoDB.Driver.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\MongoDB.Driver.Core.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\MongoDB.Libmongocrypt.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\SharpCompress.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Snappier.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\runtimes\linux\native\libmongocrypt.so
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\runtimes\win\native\mongocrypt.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\DAL.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Model.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Service.dll
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Model.pdb
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\Service.pdb
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\bin\Debug\net8.0-windows\DAL.pdb
+C:\Users\semel\source\repos\CRUDProject\Forms_UI\obj\Debug\net8.0-windows\Forms_UI.csproj.Up2Date
