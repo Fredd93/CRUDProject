@@ -15,13 +15,10 @@ namespace Service
         public TicketService() 
         {
             ticketdb = new TicketDAO();
-<<<<<<< HEAD
-=======
         }
         public List<Ticket> GetAllTickets()
         {
             return ticketdb.GetAllTickets();
->>>>>>> main
         }
     }
 }

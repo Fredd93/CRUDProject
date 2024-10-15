@@ -7,7 +7,7 @@ namespace UI
     {
         static void Main(string[] args)
         {
-            List<Ticket> values = PopulateTickets();
+            List<Ticket> values = new List<Ticket>();
             Console.WriteLine("What is your search query?");
             string query = Console.ReadLine().ToLower(); //Make the query lowercase for simplicity,
                                                          //also avoids having to look for both 'and' and 'AND'. Same with 'or' and 'OR'
@@ -36,34 +36,6 @@ namespace UI
             foreach (Ticket ticket in results) { Console.WriteLine(ticket.Title); }
             
         }
-        static private List<Ticket> PopulateTickets()
-        {
-            List<Ticket> list = new List<Ticket>();
-            list.Add(new Ticket()
-            {
-                Title = "I lost my apples"
-            });
-            list.Add(new Ticket()
-            {
-                Title = "File Recovery"
-            });
-            list.Add(new Ticket()
-            {
-                Title = "Pizza order"
-            });
-            list.Add(new Ticket()
-            {
-                Title = "Lost order"
-            });
-            list.Add(new Ticket()
-            {
-                Title = "Lost items"
-            });
-            list.Add(new Ticket()
-            {
-                Title = "Lost legendary rank item"
-            });
-            return list;
-        }
+        
     }
 }
