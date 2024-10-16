@@ -128,6 +128,7 @@
             tabControl.SelectedIndex = 0;
             tabControl.Size = new Size(935, 646);
             tabControl.TabIndex = 10;
+            tabControl.SelectedIndexChanged += tabControl_SelectedIndexChanged;
             // 
             // tabPageDashboard
             // 

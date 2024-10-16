@@ -23,11 +23,7 @@ namespace Forms_UI
 
         private void tabPageDashboard_Click(object sender, EventArgs e)
         {
-            PieChart chart = new PieChart();
-            pnlUnresolvedIncidents.Controls.Add(chart);
-            pnlIncidentsPDeadline.Controls.Add(chart);
-            chart.Colors = new Color[] { Color.Salmon, Color.Orange, Color.Lime };
-            chart.Values = new float[] { 10, 20, 40 };
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -35,6 +31,18 @@ namespace Forms_UI
             TicketService ticketService = new TicketService();
             List<Ticket> tickets = ticketService.GetAllTickets();
             PopulateTicketView(tickets);
+            PieChart chartUnresolved = new PieChart();
+            PieChart chartDeadline = new PieChart();
+            chartUnresolved.Size = new Size(250, 250);
+            chartDeadline.Size = new Size(250, 250);
+            chartUnresolved.Location = new Point(75, 75);
+            chartDeadline.Location = new Point(75, 75);
+            pnlUnresolvedIncidents.Controls.Add(chartUnresolved);
+            pnlIncidentsPDeadline.Controls.Add(chartDeadline);
+            chartDeadline.Colors = new Color[] { Color.Salmon, Color.LightGray };
+            chartDeadline.Values = new float[] { 50, 40 };
+            chartUnresolved.Colors = new Color[] { Color.Orange, Color.LightGray };
+            chartUnresolved.Values = new float[] { 50,40 };
         }
 
         private void txtFilterByEmailIncident_KeyPress(object sender, EventArgs e)
@@ -42,7 +50,7 @@ namespace Forms_UI
             //Convert EventArgs to proper type
             KeyPressEventArgs args = (KeyPressEventArgs)e;
             //Check if the pressed key was the enter key
-            if(args.KeyChar == (Char)Keys.Enter)
+            if (args.KeyChar == (Char)Keys.Enter)
             {
                 args.Handled = true;
                 //If key was the enter key, search the tickets for those that fit
@@ -93,6 +101,11 @@ namespace Forms_UI
                 }
             }
             return results;
+        }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
