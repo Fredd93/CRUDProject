@@ -87,9 +87,6 @@ namespace Forms_UI
             circle = new Rectangle(shift, shift, this.Width - shift * 2, this.Height - shift * 2);
             Brush fill = new SolidBrush(Color.White);
             e.Graphics.FillRectangle(fill, circle);
-            // Optional: Draw an outline around the pie chart
-            //Pen pen = new Pen(Color.LightGray, 3);
-            //e.Graphics.DrawEllipse(pen, pieRect);
         }
     }
 }

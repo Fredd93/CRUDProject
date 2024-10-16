@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Model;
 
 using MongoDB.Driver;
 using MongoDB.Bson;
@@ -14,7 +15,7 @@ namespace DAL
 {
     public abstract class BaseDao
     {
-        private MongoClient mongoClient;
+        public MongoClient mongoClient;
 
         public BaseDao()
         {
@@ -31,5 +32,7 @@ namespace DAL
         {
             return mongoClient.GetDatabase("CRUDProject").GetCollection<BsonDocument>(collectionName);
         }
+
+        
     }
 }

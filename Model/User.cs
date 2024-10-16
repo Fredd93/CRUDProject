@@ -28,5 +28,9 @@ namespace Model
             this.Email = (string)document["email"];
             this.Role = (Roles)Enum.Parse(typeof(Roles), (string)document["role"]);
         }
+        public override string ToString()
+        {
+            return this.Username;
+        }
     }
 }

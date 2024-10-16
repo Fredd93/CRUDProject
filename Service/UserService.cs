@@ -25,5 +25,10 @@ namespace Service
         {
             return userdb.READUserByUsername(username);
         }
+
+        public List<User> GetAllUsers()
+        {
+            return userdb.GetAllUsers();
+        }
     }
 }

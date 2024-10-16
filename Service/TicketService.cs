@@ -20,5 +20,10 @@ namespace Service
         {
             return ticketdb.GetAllTickets();
         }
+
+        public void CreateNewTicket(Ticket ticket)
+        {
+            ticketdb.CreateNewTicket(ticket);
+        }
     }
 }
