@@ -79,10 +79,17 @@ namespace Forms_UI
                 }
                 startAngle += sweepAngle; // Move the start angle for the next slice
             }
-
+            int shift = 75;
+            Rectangle circle = new Rectangle(shift, shift, this.Width - shift * 2, this.Height - shift * 2);
+            Pen pen = new Pen(Color.White, 65);
+            e.Graphics.DrawEllipse(pen, circle);
+            shift = 90;
+            circle = new Rectangle(shift, shift, this.Width - shift * 2, this.Height - shift * 2);
+            Brush fill = new SolidBrush(Color.White);
+            e.Graphics.FillRectangle(fill, circle);
             // Optional: Draw an outline around the pie chart
-            Pen pen = new Pen(Color.LightGray, 3);
-            e.Graphics.DrawEllipse(pen, pieRect);
+            //Pen pen = new Pen(Color.LightGray, 3);
+            //e.Graphics.DrawEllipse(pen, pieRect);
         }
     }
 }
