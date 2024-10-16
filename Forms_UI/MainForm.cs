@@ -69,7 +69,7 @@ namespace Forms_UI
             {
                 //Title, description, username, status, priority
                 UserService userService = new UserService();
-                ListViewItem li = new ListViewItem(new string[5] { ticket.Title, ticket.Description, userService.GetUserById(ticket.User_id).ToString(), ticket.Status.ToString(), ((Priority)ticket.Priority).ToString() });
+                ListViewItem li = new ListViewItem(new string[5] { ticket.Title, ticket.Description, userService.GetUserById(ticket.Reporter_id).ToString(), ticket.Status.ToString(), ((Priority)ticket.Priority).ToString() });
                 li.Tag = ticket;
                 ticketView.Items.Add(li);
             }

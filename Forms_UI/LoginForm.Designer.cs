@@ -30,114 +30,118 @@
         {
             components = new System.ComponentModel.Container();
             toolTip1 = new ToolTip(components);
-            label5 = new Label();
-            label6 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            textBox2 = new TextBox();
+            LoginTitleLbl = new Label();
+            LicenseLbl = new Label();
+            ProvidingLblTxt = new Label();
+            ServiceDeskHeaderLbl = new Label();
+            PasswordBox = new TextBox();
             Username = new Label();
-            label1 = new Label();
-            checkBox1 = new CheckBox();
-            textBox1 = new TextBox();
+            ForgetMeLabel = new Label();
+            RememeberMeBox = new CheckBox();
+            UsernameBox = new TextBox();
             label2 = new Label();
             LoginBtn = new Button();
             SuspendLayout();
             // 
-            // label5
+            // LoginTitleLbl
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(873, 9);
-            label5.Name = "label5";
-            label5.Size = new Size(145, 46);
-            label5.TabIndex = 8;
-            label5.Text = "NoDesk";
+            LoginTitleLbl.AutoSize = true;
+            LoginTitleLbl.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginTitleLbl.Location = new Point(764, 7);
+            LoginTitleLbl.Name = "LoginTitleLbl";
+            LoginTitleLbl.Size = new Size(117, 37);
+            LoginTitleLbl.TabIndex = 8;
+            LoginTitleLbl.Text = "NoDesk";
             // 
-            // label6
+            // LicenseLbl
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(742, 67);
-            label6.Name = "label6";
-            label6.Size = new Size(280, 28);
-            label6.TabIndex = 9;
-            label6.Text = "Licensed to: The Garden Group";
+            LicenseLbl.AutoSize = true;
+            LicenseLbl.Font = new Font("Segoe UI", 12F);
+            LicenseLbl.Location = new Point(649, 50);
+            LicenseLbl.Name = "LicenseLbl";
+            LicenseLbl.Size = new Size(223, 21);
+            LicenseLbl.TabIndex = 9;
+            LicenseLbl.Text = "Licensed to: The Garden Group";
             // 
-            // label4
+            // ProvidingLblTxt
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(300, 183);
-            label4.Name = "label4";
-            label4.Size = new Size(498, 20);
-            label4.TabIndex = 18;
-            label4.Text = "Please provide login credentials to login to NoDesk for The Garden Group";
+            ProvidingLblTxt.AutoSize = true;
+            ProvidingLblTxt.Location = new Point(262, 137);
+            ProvidingLblTxt.Name = "ProvidingLblTxt";
+            ProvidingLblTxt.Size = new Size(392, 15);
+            ProvidingLblTxt.TabIndex = 18;
+            ProvidingLblTxt.Text = "Please provide login credentials to login to NoDesk for The Garden Group";
             // 
-            // label3
+            // ServiceDeskHeaderLbl
             // 
-            label3.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(490, 122);
-            label3.Name = "label3";
-            label3.Size = new Size(174, 41);
-            label3.TabIndex = 17;
-            label3.Text = "NoDesk: TGC";
+            ServiceDeskHeaderLbl.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ServiceDeskHeaderLbl.Location = new Point(429, 92);
+            ServiceDeskHeaderLbl.Name = "ServiceDeskHeaderLbl";
+            ServiceDeskHeaderLbl.Size = new Size(152, 31);
+            ServiceDeskHeaderLbl.TabIndex = 17;
+            ServiceDeskHeaderLbl.Text = "NoDesk: TGC";
             // 
-            // textBox2
+            // PasswordBox
             // 
-            textBox2.Location = new Point(397, 321);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(318, 27);
-            textBox2.TabIndex = 14;
+            PasswordBox.Location = new Point(347, 241);
+            PasswordBox.Margin = new Padding(3, 2, 3, 2);
+            PasswordBox.Name = "PasswordBox";
+            PasswordBox.Size = new Size(279, 23);
+            PasswordBox.TabIndex = 14;
             // 
             // Username
             // 
             Username.AutoSize = true;
-            Username.Location = new Point(397, 233);
+            Username.Location = new Point(347, 175);
             Username.Name = "Username";
-            Username.Size = new Size(75, 20);
+            Username.Size = new Size(60, 15);
             Username.TabIndex = 11;
             Username.Text = "Username";
             // 
-            // label1
+            // ForgetMeLabel
             // 
-            label1.AutoSize = true;
-            label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(564, 360);
-            label1.Name = "label1";
-            label1.Size = new Size(151, 20);
-            label1.TabIndex = 16;
-            label1.Text = "Forgot my password?";
+            ForgetMeLabel.AutoSize = true;
+            ForgetMeLabel.ForeColor = SystemColors.Highlight;
+            ForgetMeLabel.Location = new Point(494, 270);
+            ForgetMeLabel.Name = "ForgetMeLabel";
+            ForgetMeLabel.Size = new Size(120, 15);
+            ForgetMeLabel.TabIndex = 16;
+            ForgetMeLabel.Text = "Forgot my password?";
             // 
-            // checkBox1
+            // RememeberMeBox
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(397, 360);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(129, 24);
-            checkBox1.TabIndex = 15;
-            checkBox1.Text = "Remember Me";
-            checkBox1.UseVisualStyleBackColor = true;
+            RememeberMeBox.AutoSize = true;
+            RememeberMeBox.Location = new Point(347, 270);
+            RememeberMeBox.Margin = new Padding(3, 2, 3, 2);
+            RememeberMeBox.Name = "RememeberMeBox";
+            RememeberMeBox.Size = new Size(104, 19);
+            RememeberMeBox.TabIndex = 15;
+            RememeberMeBox.Text = "Remember Me";
+            RememeberMeBox.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // UsernameBox
             // 
-            textBox1.Location = new Point(397, 256);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(318, 27);
-            textBox1.TabIndex = 13;
+            UsernameBox.Location = new Point(347, 192);
+            UsernameBox.Margin = new Padding(3, 2, 3, 2);
+            UsernameBox.Name = "UsernameBox";
+            UsernameBox.Size = new Size(279, 23);
+            UsernameBox.TabIndex = 13;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(397, 298);
+            label2.Location = new Point(347, 224);
             label2.Name = "label2";
-            label2.Size = new Size(70, 20);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 12;
             label2.Text = "Password";
             // 
             // LoginBtn
             // 
-            LoginBtn.Location = new Point(430, 418);
+            LoginBtn.Location = new Point(376, 314);
+            LoginBtn.Margin = new Padding(3, 2, 3, 2);
             LoginBtn.Name = "LoginBtn";
-            LoginBtn.Size = new Size(258, 45);
+            LoginBtn.Size = new Size(226, 34);
             LoginBtn.TabIndex = 10;
             LoginBtn.Text = "Login";
             LoginBtn.UseVisualStyleBackColor = true;
@@ -145,23 +149,23 @@
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1099, 585);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
+            ClientSize = new Size(962, 439);
+            Controls.Add(ProvidingLblTxt);
+            Controls.Add(ServiceDeskHeaderLbl);
+            Controls.Add(PasswordBox);
             Controls.Add(Username);
-            Controls.Add(label1);
-            Controls.Add(checkBox1);
-            Controls.Add(textBox1);
+            Controls.Add(ForgetMeLabel);
+            Controls.Add(RememeberMeBox);
+            Controls.Add(UsernameBox);
             Controls.Add(label2);
             Controls.Add(LoginBtn);
-            Controls.Add(label6);
-            Controls.Add(label5);
+            Controls.Add(LicenseLbl);
+            Controls.Add(LoginTitleLbl);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
             Text = "Login";
-            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,15 +173,15 @@
         #endregion
 
         private ToolTip toolTip1;
-        private Label label5;
-        private Label label6;
-        private Label label4;
-        private Label label3;
-        private TextBox textBox2;
+        private Label LoginTitleLbl;
+        private Label LicenseLbl;
+        private Label ProvidingLblTxt;
+        private Label ServiceDeskHeaderLbl;
+        private TextBox PasswordBox;
         private Label Username;
-        private Label label1;
-        private CheckBox checkBox1;
-        private TextBox textBox1;
+        private Label ForgetMeLabel;
+        private CheckBox RememeberMeBox;
+        private TextBox UsernameBox;
         private Label label2;
         private Button LoginBtn;
     }

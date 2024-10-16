@@ -170,10 +170,7 @@
           "MongoDB.Driver": "2.29.0"
         },
         "runtime": {
-          "DAL.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "DAL.dll": {}
         }
       },
       "Model/1.0.0": {
@@ -181,10 +178,7 @@
           "MongoDB.Driver": "2.29.0"
         },
         "runtime": {
-          "Model.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Model.dll": {}
         }
       },
       "Service/1.0.0": {
@@ -194,10 +188,7 @@
           "MongoDB.Driver": "2.29.0"
         },
         "runtime": {
-          "Service.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Service.dll": {}
         }
       }
     }

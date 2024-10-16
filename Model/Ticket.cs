@@ -14,7 +14,7 @@ namespace Model
         public ObjectId Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public ObjectId User_id { get; set; }
+        public ObjectId Reporter_id { get; set; }
         public Enums.Status Status { get; set; }
         public DateTime Start_Date { get; set; }
         public DateTime End_Date { get; set; }
@@ -24,7 +24,7 @@ namespace Model
             this.Id = (ObjectId)document["_id"];
             this.Title = (string)document["Title"];
             this.Description = (string)document["Description"];
-            this.User_id = (ObjectId)document["User_id"];
+            this.Reporter_id = (ObjectId)document["Reporter_id"];
             this.Status = (Status)(int)document["Status"];
             this.Start_Date = (DateTime)document["Start_Date"];
             if (document["End_Date"] != null)
@@ -33,11 +33,11 @@ namespace Model
             }
         }
 
-        public Ticket(string title, string description, ObjectId user_id, Status status, DateTime start_Date, DateTime end_Date, Priority priority)
+        public Ticket(string title, string description, ObjectId reporter_id, Status status, DateTime start_Date, DateTime end_Date, Priority priority)
         {
             this.Title = title;
             this.Description = description;
-            this.User_id = user_id;
+            this.Reporter_id = reporter_id;
             this.Status = status;
             this.Start_Date = start_Date;
             this.End_Date = end_Date;

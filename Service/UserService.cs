@@ -35,5 +35,10 @@ namespace Service
         {
             return userdb.GetAllUsers();
         }
+        public User ValidateUser(string username, string password)
+        {
+            return userdb.ValidateUserCredentials(username, password);
+        }
+
     }
 }

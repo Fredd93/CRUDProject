@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
+using System.Text.Json;
 
 namespace DAL
 {
@@ -46,6 +47,21 @@ namespace DAL
                 users.Add(new User(document));
             }
             return users;
+        }
+        public User ValidateUserCredentials(string username, string password)
+        {
+            IMongoCollection<BsonDocument> collection = this.READCollection("User");
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.And(
+                Builders<BsonDocument>.Filter.Eq("username", username),
+                Builders<BsonDocument>.Filter.Eq("password", password) // This would ideally be hashed
+            );
+            BsonDocument document = collection.Find(filter).FirstOrDefault();
+
+            if (document == null)
+            {
+                return null; // Invalid credentials
+            }
+            return new User(document);
         }
     }
 }
