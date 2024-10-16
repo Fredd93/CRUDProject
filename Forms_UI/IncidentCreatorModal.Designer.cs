@@ -46,11 +46,15 @@
             label12 = new Label();
             label11 = new Label();
             label10 = new Label();
+            comboBoxHandler = new ComboBox();
+            label1 = new Label();
             pnlCreateNewIncident.SuspendLayout();
             SuspendLayout();
             // 
             // pnlCreateNewIncident
             // 
+            pnlCreateNewIncident.Controls.Add(comboBoxHandler);
+            pnlCreateNewIncident.Controls.Add(label1);
             pnlCreateNewIncident.Controls.Add(dateTimeDeadline);
             pnlCreateNewIncident.Controls.Add(dateTimeReportTime);
             pnlCreateNewIncident.Controls.Add(btnSubmitIncident);
@@ -75,7 +79,7 @@
             // 
             // dateTimeDeadline
             // 
-            dateTimeDeadline.Location = new Point(195, 321);
+            dateTimeDeadline.Location = new Point(195, 359);
             dateTimeDeadline.Name = "dateTimeDeadline";
             dateTimeDeadline.Size = new Size(317, 27);
             dateTimeDeadline.TabIndex = 18;
@@ -110,16 +114,16 @@
             // 
             // textBoxDescription
             // 
-            textBoxDescription.Location = new Point(195, 376);
+            textBoxDescription.Location = new Point(195, 403);
             textBoxDescription.Multiline = true;
             textBoxDescription.Name = "textBoxDescription";
-            textBoxDescription.Size = new Size(319, 157);
+            textBoxDescription.Size = new Size(319, 139);
             textBoxDescription.TabIndex = 14;
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(21, 379);
+            label17.Location = new Point(21, 406);
             label17.Name = "label17";
             label17.Size = new Size(88, 20);
             label17.TabIndex = 13;
@@ -129,7 +133,7 @@
             // 
             comboBoxPriority.FormattingEnabled = true;
             comboBoxPriority.Items.AddRange(new object[] { "Low", "Medium", "High" });
-            comboBoxPriority.Location = new Point(195, 271);
+            comboBoxPriority.Location = new Point(195, 314);
             comboBoxPriority.Name = "comboBoxPriority";
             comboBoxPriority.Size = new Size(319, 28);
             comboBoxPriority.TabIndex = 11;
@@ -161,7 +165,7 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 10F);
-            label16.Location = new Point(21, 321);
+            label16.Location = new Point(21, 359);
             label16.Name = "label16";
             label16.Size = new Size(161, 23);
             label16.TabIndex = 6;
@@ -171,7 +175,7 @@
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 10F);
-            label15.Location = new Point(21, 271);
+            label15.Location = new Point(21, 314);
             label15.Name = "label15";
             label15.Size = new Size(68, 23);
             label15.TabIndex = 5;
@@ -227,6 +231,24 @@
             label10.TabIndex = 0;
             label10.Text = "Create New Incident";
             // 
+            // comboBoxHandler
+            // 
+            comboBoxHandler.FormattingEnabled = true;
+            comboBoxHandler.Location = new Point(195, 269);
+            comboBoxHandler.Name = "comboBoxHandler";
+            comboBoxHandler.Size = new Size(319, 28);
+            comboBoxHandler.TabIndex = 20;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(21, 269);
+            label1.Name = "label1";
+            label1.Size = new Size(138, 23);
+            label1.TabIndex = 19;
+            label1.Text = "Handled by user:";
+            // 
             // IncidentCreatorModal
             // 
             AcceptButton = btnSubmitIncident;
@@ -263,5 +285,7 @@
         private Label label10;
         private DateTimePicker dateTimeReportTime;
         private DateTimePicker dateTimeDeadline;
+        private ComboBox comboBoxHandler;
+        private Label label1;
     }
 }

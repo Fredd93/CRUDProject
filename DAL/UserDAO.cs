@@ -40,5 +40,18 @@ namespace DAL
             }
             return users;
         }
+
+        public List<User> GetAllServiceUsers()
+        {
+            List<User> users = new List<User>();
+            IMongoCollection<BsonDocument> collection = this.READCollection("User");
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq("role", "servicedeskemployee");
+            List<BsonDocument> documents = collection.Find(filter).ToList();
+            foreach (BsonDocument document in documents)
+            { //Get all users
+                users.Add(new User(document));
+            }
+            return users;
+        }
     }
 }

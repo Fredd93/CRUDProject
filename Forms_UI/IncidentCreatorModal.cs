@@ -24,16 +24,25 @@ namespace Forms_UI
             this.MinimizeBox = false;
             mainForm = parentForm;
             UserService userService = new UserService();
-            PopulateUserComboBox(userService.GetAllUsers());
+            PopulateReporterComboBox(userService.GetAllUsers());
+            PopulateHandlerComboBox(userService.GetAllServiceUsers());
 
         }
 
-        private void PopulateUserComboBox(List<User> users)
+        private void PopulateReporterComboBox(List<User> users)
         {
             foreach (User user in users)
             {
                 
                 comboBoxUsername.Items.Add(user);
+            }
+        }
+        private void PopulateHandlerComboBox(List<User> users)
+        {
+            foreach (User user in users)
+            {
+
+                comboBoxHandler.Items.Add(user);
             }
         }
 
@@ -55,8 +64,9 @@ namespace Forms_UI
             
             TicketService ticketService = new TicketService();
 
-            ObjectId userid = ((User)(comboBoxUsername.SelectedItem)).Id;
-            Ticket ticket = new Ticket(txtBoxSubjectofIncident.Text, textBoxDescription.Text, userid, Status.open, dateTimeReportTime.Value, dateTimeDeadline.Value, priority);
+            ObjectId reporterid = ((User)(comboBoxUsername.SelectedItem)).Id;
+            ObjectId handlerid = ((User)(comboBoxHandler.SelectedItem)).Id;
+            Ticket ticket = new Ticket(txtBoxSubjectofIncident.Text, textBoxDescription.Text, reporterid, handlerid, Status.open, dateTimeReportTime.Value, dateTimeDeadline.Value, priority);
 
             ticketService.CreateNewTicket(ticket);
             MessageBox.Show("Ticket succesfully added");

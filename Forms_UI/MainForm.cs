@@ -68,7 +68,7 @@ namespace Forms_UI
             foreach (Ticket ticket in tickets)
             {
                 //Title, description, status, user id, duration
-                ListViewItem li = new ListViewItem(new string[4] { ticket.Title, ticket.Description, ticket.Status.ToString(), ticket.User_id.ToString() });
+                ListViewItem li = new ListViewItem(new string[4] { ticket.Title, ticket.Description, ticket.Status.ToString(), ticket.Reporter_id.ToString() });
                 li.Tag = ticket;
                 ticketView.Items.Add(li);
             }
