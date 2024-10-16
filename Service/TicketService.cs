@@ -20,5 +20,9 @@ namespace Service
         {
             return ticketdb.GetAllTickets();
         }
+        public List<Ticket> GetTicketsFromSearchQuery(string query)
+        {
+            return ticketdb.GetTicketsFromSearchQuery(query);
+        }
     }
 }

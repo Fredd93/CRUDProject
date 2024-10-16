@@ -45,7 +45,7 @@
             title = new ColumnHeader();
             description = new ColumnHeader();
             status = new ColumnHeader();
-            user_id = new ColumnHeader();
+            username = new ColumnHeader();
             btnCreateIncident = new Button();
             txtFilterByEmailIncident = new TextBox();
             label9 = new Label();
@@ -88,6 +88,7 @@
             btnAddNewUser = new Button();
             txtFilterByEmail = new TextBox();
             label8 = new Label();
+            priority = new ColumnHeader();
             tabControl.SuspendLayout();
             tabPageDashboard.SuspendLayout();
             pnlIncidentsPDeadline.SuspendLayout();
@@ -236,7 +237,7 @@
             // 
             // ticketView
             // 
-            ticketView.Columns.AddRange(new ColumnHeader[] { title, description, status, user_id });
+            ticketView.Columns.AddRange(new ColumnHeader[] { title, description, username, status, priority });
             ticketView.FullRowSelect = true;
             ticketView.GridLines = true;
             ticketView.Location = new Point(27, 171);
@@ -249,22 +250,24 @@
             // title
             // 
             title.Text = "Title";
-            title.Width = 300;
+            title.Width = 200;
             // 
             // description
             // 
             description.Text = "Description";
-            description.Width = 300;
+            description.Width = 200;
             // 
             // status
             // 
+            status.DisplayIndex = 2;
             status.Text = "Status";
             status.Width = 137;
             // 
-            // user_id
+            // username
             // 
-            user_id.Text = "User ID";
-            user_id.Width = 137;
+            username.DisplayIndex = 3;
+            username.Text = "Username";
+            username.Width = 200;
             // 
             // btnCreateIncident
             // 
@@ -679,6 +682,11 @@
             label8.TabIndex = 0;
             label8.Text = "User Management";
             // 
+            // priority
+            // 
+            priority.Text = "Priority";
+            priority.Width = 137;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -770,6 +778,7 @@
         private ColumnHeader title;
         private ColumnHeader description;
         private ColumnHeader status;
-        private ColumnHeader user_id;
+        private ColumnHeader username;
+        private ColumnHeader priority;
     }
 }

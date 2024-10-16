@@ -14,7 +14,7 @@ namespace Model
         public ObjectId Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public int User_id { get; set; }
+        public ObjectId User_id { get; set; }
         public Enums.Status Status { get; set; }
         public DateTime Start_Date { get; set; }
         public DateTime End_Date { get; set; }
@@ -22,12 +22,12 @@ namespace Model
         public Ticket(BsonDocument document)
         {
             this.Id = (ObjectId)document["_id"];
-            this.Title = (string)document["title"];
-            this.Description = (string)document["description"];
-            this.User_id = (int)document["user_id"];
-            this.Status = (Status)Enum.Parse(typeof(Status), (string)document["status"]);
-            this.Start_Date = (DateTime)document["start_date"];
-            if (document["end_date"] != null)
+            this.Title = (string)document["Title"];
+            this.Description = (string)document["Description"];
+            this.User_id = (ObjectId)document["User_id"];
+            this.Status = (Status)(int)document["Status"];
+            this.Start_Date = (DateTime)document["Start_Date"];
+            if (document["End_Date"] != null)
             {
                 //this.End_Date = (DateTime)document["end_date"];
             }
