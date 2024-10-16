@@ -14,8 +14,12 @@ namespace Model
         public ObjectId Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+<<<<<<< HEAD
         public ObjectId Reporter_id { get; set; }
         public ObjectId Handler_id { get; set; }
+=======
+        public ObjectId User_id { get; set; }
+>>>>>>> main
         public Enums.Status Status { get; set; }
         public DateTime Start_Date { get; set; }
         public DateTime End_Date { get; set; }
