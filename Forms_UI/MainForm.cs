@@ -42,7 +42,7 @@ namespace Forms_UI
             chartDeadline.Colors = new Color[] { Color.Salmon, Color.LightGray };
             chartDeadline.Values = new float[] { 50, 40 };
             chartUnresolved.Colors = new Color[] { Color.Orange, Color.LightGray };
-            chartUnresolved.Values = new float[] { 50,40 };
+            chartUnresolved.Values = new float[] { 50, 40 };
         }
 
         private void txtFilterByEmailIncident_KeyPress(object sender, EventArgs e)
@@ -106,6 +106,12 @@ namespace Forms_UI
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCreateIncident_Click(object sender, EventArgs e)
+        {
+            IncidentCreatorModal incidentCreatorModal = new IncidentCreatorModal(this);
+            incidentCreatorModal.ShowDialog();
         }
     }
 }

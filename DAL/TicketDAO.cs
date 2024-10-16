@@ -2,6 +2,7 @@
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,12 @@ namespace DAL
                 tickets.Add(new Ticket(document));
             }
             return tickets;
+        }
+
+        public void CreateNewTicket(Ticket ticket)
+        {
+            IMongoCollection<Ticket> collection = base.mongoClient.GetDatabase("CRUDProject").GetCollection<Ticket>("Tickets");
+            collection.InsertOne(ticket);
         }
     }
 }
