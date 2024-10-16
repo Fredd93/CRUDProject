@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using System.Text.Json;
+using Utility;
 
 namespace DAL
 {
@@ -50,10 +51,13 @@ namespace DAL
         }
         public User ValidateUserCredentials(string username, string password)
         {
+            // Hash the entered password before comparison
+            string hashedPassword = PasswordHashing.HashPassword(password);
+
             IMongoCollection<BsonDocument> collection = this.READCollection("User");
             FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.And(
                 Builders<BsonDocument>.Filter.Eq("username", username),
-                Builders<BsonDocument>.Filter.Eq("password", password) // This would ideally be hashed
+                Builders<BsonDocument>.Filter.Eq("password", hashedPassword) // Compare the hashed password
             );
             BsonDocument document = collection.Find(filter).FirstOrDefault();
 
@@ -61,7 +65,7 @@ namespace DAL
             {
                 return null; // Invalid credentials
             }
-            return new User(document);
+            return new User(document); // Return the User object if credentials are valid
         }
     }
 }
