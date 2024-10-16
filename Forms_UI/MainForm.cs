@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Service;
 using Model;
+using Model.Enums;
 using static MongoDB.Driver.WriteConcern;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
@@ -55,11 +56,10 @@ namespace Forms_UI
                 args.Handled = true;
                 //If key was the enter key, search the tickets for those that fit
                 TicketService ticketService = new TicketService();
-                //Populate listview with all tickets before filtering them
-                PopulateTicketView(ticketService.GetAllTickets());
-                List<Ticket> tickets = SearchForTickets(txtFilterByEmailIncident.Text);
 
+                List<Ticket> tickets = ticketService.GetTicketsFromSearchQuery(txtFilterByEmailIncident.Text);
                 PopulateTicketView(tickets);
+
             }
         }
         private void PopulateTicketView(List<Ticket> tickets)
@@ -67,12 +67,14 @@ namespace Forms_UI
             ticketView.Items.Clear();
             foreach (Ticket ticket in tickets)
             {
-                //Title, description, status, user id, duration
-                ListViewItem li = new ListViewItem(new string[4] { ticket.Title, ticket.Description, ticket.Status.ToString(), ticket.User_id.ToString() });
+                //Title, description, username, status, priority
+                UserService userService = new UserService();
+                ListViewItem li = new ListViewItem(new string[5] { ticket.Title, ticket.Description, userService.GetUserById(ticket.User_id).ToString(), ticket.Status.ToString(), ((Priority)ticket.Priority).ToString() });
                 li.Tag = ticket;
                 ticketView.Items.Add(li);
             }
         }
+        //Keeping this method here in case problems occur
         private List<Ticket> SearchForTickets(string text)
         {
             string query = text.ToLower(); //Make the query lowercase for simplicity,

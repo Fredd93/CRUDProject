@@ -29,6 +29,13 @@ namespace DAL
             }
             return new User(document);
         }
+        public User GetUserById(ObjectId id)
+        {
+            IMongoCollection<BsonDocument> collection = this.READCollection("User");
+            FilterDefinition<BsonDocument> filter = Builders<BsonDocument>.Filter.Eq("_id", id);
+            BsonDocument document = collection.Find(filter).First();
+            return new User(document);
+        }
 
         public List<User> GetAllUsers()
         {

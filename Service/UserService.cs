@@ -1,5 +1,6 @@
 ﻿using DAL;
 using Model;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,10 @@ namespace Service
         public User GetUserByUsername(string username)
         {
             return userdb.READUserByUsername(username);
+        }
+        public User GetUserById(ObjectId id)
+        {
+            return userdb.GetUserById(id);
         }
 
         public List<User> GetAllUsers()

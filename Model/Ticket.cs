@@ -14,7 +14,7 @@ namespace Model
         public ObjectId Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public Object User_id { get; set; }
+        public ObjectId User_id { get; set; }
         public Enums.Status Status { get; set; }
         public DateTime Start_Date { get; set; }
         public DateTime End_Date { get; set; }
