@@ -832,6 +832,8 @@
   },
   "packageFolders": {
     "C:\\Users\\Mahmoud\\.nuget\\packages\\": {}
+
+    "C:\\Users\\tabee\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -844,6 +846,14 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+      "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj",
+      "projectName": "Service",
+      "projectPath": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj",
+      "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+      "outputPath": "F:\\2.1 Project\\CRUDProject\\Service\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -862,6 +872,11 @@
             },
             "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
               "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj"
+            "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj": {
+              "projectPath": "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj"
+            },
+            "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+              "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj"
             }
           }
         }

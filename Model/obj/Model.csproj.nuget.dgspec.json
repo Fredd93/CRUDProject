@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+
     "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
+    "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {}
+  },
+  "projects": {
+    "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

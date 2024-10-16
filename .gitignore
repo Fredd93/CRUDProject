@@ -5,3 +5,6 @@
 # Config files
 appsettings.json
 /.vs
+DAL/obj/Debug/net8.0/DAL.assets.cache
+DAL/obj/Debug/net8.0/DAL.assets.cache
+DAL/obj/Debug/net8.0/DAL.csproj.AssemblyReference.cache

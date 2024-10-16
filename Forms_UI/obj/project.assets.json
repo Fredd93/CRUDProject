@@ -850,11 +850,16 @@
     ]
   },
   "packageFolders": {
+
     "C:\\Users\\Mahmoud\\.nuget\\packages\\": {}
+
+    "C:\\Users\\tabee\\.nuget\\packages\\": {}
+
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+
       "projectUniqueName": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
       "projectName": "Forms_UI",
       "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
@@ -863,6 +868,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
+      "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
+      "projectName": "Forms_UI",
+      "projectPath": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
+      "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+      "outputPath": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -876,11 +891,19 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
+
             "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
               "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj"
             },
             "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Service\\Service.csproj": {
               "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Service\\Service.csproj"
+
+            "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+              "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj"
+            },
+            "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj": {
+              "projectPath": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj"
+
             }
           }
         }

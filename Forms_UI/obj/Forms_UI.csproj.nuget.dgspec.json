@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+
     "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Forms_UI\\Forms_UI.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
+    "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj": {}
+  },
+  "projects": {
+    "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +45,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+
               "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
                 "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj"
+
+              "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+                "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj"
+
               }
             }
           }
@@ -74,6 +96,7 @@
         }
       }
     },
+
     "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Forms_UI\\Forms_UI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -85,6 +108,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
+    "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
+        "projectName": "Forms_UI",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,11 +134,19 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
+
               "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
                 "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj"
               },
               "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Service\\Service.csproj": {
                 "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Service\\Service.csproj"
+
+              "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+                "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj"
+              },
+              "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj": {
+                "projectPath": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj"
+
               }
             }
           }
@@ -144,6 +188,7 @@
         }
       }
     },
+
     "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -155,6 +200,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
+    "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -210,6 +268,7 @@
         }
       }
     },
+
     "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -221,6 +280,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
+    "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -234,11 +306,19 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+
               "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\DAL\\DAL.csproj": {
                 "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\DAL\\DAL.csproj"
               },
               "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
                 "projectPath": "C:\\Users\\Mahmoud\\source\\repos\\CRUDProject\\Model\\Model.csproj"
+
+              "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj": {
+                "projectPath": "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj"
+              },
+              "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+                "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj"
+
               }
             }
           }
