@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\semel\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\semel\\.nuget\\packages"
+      "C:\\Users\\daanp\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\daanp\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

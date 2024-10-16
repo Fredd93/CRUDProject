@@ -50,7 +50,6 @@
             txtFilterByEmailIncident = new TextBox();
             label9 = new Label();
             tabPageUserManagement = new TabPage();
-            pnlCreateNewIncident = new Panel();
             pnlCreateUser = new Panel();
             btnAddUser = new Button();
             btnCancelAddUser = new Button();
@@ -67,23 +66,6 @@
             label19 = new Label();
             txtFirstName = new TextBox();
             label18 = new Label();
-            btnSubmitIncident = new Button();
-            btnCancelIncidentSubmission = new Button();
-            textBoxDescription = new TextBox();
-            label17 = new Label();
-            comboBoxDeadline = new ComboBox();
-            comboBoxPriority = new ComboBox();
-            comboBoxUsername = new ComboBox();
-            comboBoxTypeofIncident = new ComboBox();
-            txtBoxSubjectofIncident = new TextBox();
-            comboBoxReportTime = new ComboBox();
-            label16 = new Label();
-            label15 = new Label();
-            label14 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
-            label10 = new Label();
             pnlUserOverview = new Panel();
             btnAddNewUser = new Button();
             txtFilterByEmail = new TextBox();
@@ -95,7 +77,6 @@
             pnlUnresolvedIncidents.SuspendLayout();
             tabPageIncidentManagement.SuspendLayout();
             tabPageUserManagement.SuspendLayout();
-            pnlCreateNewIncident.SuspendLayout();
             pnlCreateUser.SuspendLayout();
             SuspendLayout();
             // 
@@ -129,6 +110,7 @@
             tabControl.SelectedIndex = 0;
             tabControl.Size = new Size(935, 646);
             tabControl.TabIndex = 10;
+            tabControl.SelectedIndexChanged += tabControl_SelectedIndexChanged;
             // 
             // tabPageDashboard
             // 
@@ -278,6 +260,7 @@
             btnCreateIncident.TabIndex = 2;
             btnCreateIncident.Text = "Create Incident";
             btnCreateIncident.UseVisualStyleBackColor = false;
+            btnCreateIncident.Click += btnCreateIncident_Click;
             // 
             // txtFilterByEmailIncident
             // 
@@ -300,7 +283,7 @@
             // 
             // tabPageUserManagement
             // 
-            tabPageUserManagement.Controls.Add(pnlCreateNewIncident);
+            tabPageUserManagement.Controls.Add(pnlCreateUser);
             tabPageUserManagement.Controls.Add(pnlUserOverview);
             tabPageUserManagement.Controls.Add(btnAddNewUser);
             tabPageUserManagement.Controls.Add(txtFilterByEmail);
@@ -313,31 +296,6 @@
             tabPageUserManagement.TabIndex = 2;
             tabPageUserManagement.Text = "User Management";
             tabPageUserManagement.UseVisualStyleBackColor = true;
-            // 
-            // pnlCreateNewIncident
-            // 
-            pnlCreateNewIncident.Controls.Add(pnlCreateUser);
-            pnlCreateNewIncident.Controls.Add(btnSubmitIncident);
-            pnlCreateNewIncident.Controls.Add(btnCancelIncidentSubmission);
-            pnlCreateNewIncident.Controls.Add(textBoxDescription);
-            pnlCreateNewIncident.Controls.Add(label17);
-            pnlCreateNewIncident.Controls.Add(comboBoxDeadline);
-            pnlCreateNewIncident.Controls.Add(comboBoxPriority);
-            pnlCreateNewIncident.Controls.Add(comboBoxUsername);
-            pnlCreateNewIncident.Controls.Add(comboBoxTypeofIncident);
-            pnlCreateNewIncident.Controls.Add(txtBoxSubjectofIncident);
-            pnlCreateNewIncident.Controls.Add(comboBoxReportTime);
-            pnlCreateNewIncident.Controls.Add(label16);
-            pnlCreateNewIncident.Controls.Add(label15);
-            pnlCreateNewIncident.Controls.Add(label14);
-            pnlCreateNewIncident.Controls.Add(label13);
-            pnlCreateNewIncident.Controls.Add(label12);
-            pnlCreateNewIncident.Controls.Add(label11);
-            pnlCreateNewIncident.Controls.Add(label10);
-            pnlCreateNewIncident.Location = new Point(3, 1);
-            pnlCreateNewIncident.Name = "pnlCreateNewIncident";
-            pnlCreateNewIncident.Size = new Size(924, 616);
-            pnlCreateNewIncident.TabIndex = 4;
             // 
             // pnlCreateUser
             // 
@@ -356,7 +314,7 @@
             pnlCreateUser.Controls.Add(label19);
             pnlCreateUser.Controls.Add(txtFirstName);
             pnlCreateUser.Controls.Add(label18);
-            pnlCreateUser.Location = new Point(-3, 0);
+            pnlCreateUser.Location = new Point(0, 0);
             pnlCreateUser.Name = "pnlCreateUser";
             pnlCreateUser.Size = new Size(924, 616);
             pnlCreateUser.TabIndex = 17;
@@ -494,159 +452,6 @@
             label18.TabIndex = 0;
             label18.Text = "Create New User";
             // 
-            // btnSubmitIncident
-            // 
-            btnSubmitIncident.BackColor = Color.SkyBlue;
-            btnSubmitIncident.Location = new Point(389, 548);
-            btnSubmitIncident.Name = "btnSubmitIncident";
-            btnSubmitIncident.Size = new Size(125, 41);
-            btnSubmitIncident.TabIndex = 16;
-            btnSubmitIncident.Text = "Submit Incident";
-            btnSubmitIncident.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelIncidentSubmission
-            // 
-            btnCancelIncidentSubmission.Location = new Point(197, 548);
-            btnCancelIncidentSubmission.Name = "btnCancelIncidentSubmission";
-            btnCancelIncidentSubmission.Size = new Size(125, 41);
-            btnCancelIncidentSubmission.TabIndex = 15;
-            btnCancelIncidentSubmission.Text = "Cancel";
-            btnCancelIncidentSubmission.UseVisualStyleBackColor = true;
-            // 
-            // textBoxDescription
-            // 
-            textBoxDescription.Location = new Point(195, 376);
-            textBoxDescription.Multiline = true;
-            textBoxDescription.Name = "textBoxDescription";
-            textBoxDescription.Size = new Size(319, 157);
-            textBoxDescription.TabIndex = 14;
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(21, 379);
-            label17.Name = "label17";
-            label17.Size = new Size(88, 20);
-            label17.TabIndex = 13;
-            label17.Text = "Description:";
-            // 
-            // comboBoxDeadline
-            // 
-            comboBoxDeadline.FormattingEnabled = true;
-            comboBoxDeadline.Location = new Point(195, 321);
-            comboBoxDeadline.Name = "comboBoxDeadline";
-            comboBoxDeadline.Size = new Size(319, 28);
-            comboBoxDeadline.TabIndex = 12;
-            // 
-            // comboBoxPriority
-            // 
-            comboBoxPriority.FormattingEnabled = true;
-            comboBoxPriority.Location = new Point(195, 271);
-            comboBoxPriority.Name = "comboBoxPriority";
-            comboBoxPriority.Size = new Size(319, 28);
-            comboBoxPriority.TabIndex = 11;
-            // 
-            // comboBoxUsername
-            // 
-            comboBoxUsername.FormattingEnabled = true;
-            comboBoxUsername.Location = new Point(195, 225);
-            comboBoxUsername.Name = "comboBoxUsername";
-            comboBoxUsername.Size = new Size(319, 28);
-            comboBoxUsername.TabIndex = 10;
-            // 
-            // comboBoxTypeofIncident
-            // 
-            comboBoxTypeofIncident.FormattingEnabled = true;
-            comboBoxTypeofIncident.Location = new Point(195, 181);
-            comboBoxTypeofIncident.Name = "comboBoxTypeofIncident";
-            comboBoxTypeofIncident.Size = new Size(319, 28);
-            comboBoxTypeofIncident.TabIndex = 9;
-            // 
-            // txtBoxSubjectofIncident
-            // 
-            txtBoxSubjectofIncident.Location = new Point(195, 136);
-            txtBoxSubjectofIncident.Name = "txtBoxSubjectofIncident";
-            txtBoxSubjectofIncident.Size = new Size(319, 27);
-            txtBoxSubjectofIncident.TabIndex = 8;
-            // 
-            // comboBoxReportTime
-            // 
-            comboBoxReportTime.FormattingEnabled = true;
-            comboBoxReportTime.Location = new Point(195, 95);
-            comboBoxReportTime.Name = "comboBoxReportTime";
-            comboBoxReportTime.Size = new Size(319, 28);
-            comboBoxReportTime.TabIndex = 7;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 10F);
-            label16.Location = new Point(21, 321);
-            label16.Name = "label16";
-            label16.Size = new Size(161, 23);
-            label16.TabIndex = 6;
-            label16.Text = "Deadline/Follow up:";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 10F);
-            label15.Location = new Point(21, 271);
-            label15.Name = "label15";
-            label15.Size = new Size(68, 23);
-            label15.TabIndex = 5;
-            label15.Text = "Priority:";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 10F);
-            label14.Location = new Point(21, 225);
-            label14.Name = "label14";
-            label14.Size = new Size(144, 23);
-            label14.TabIndex = 4;
-            label14.Text = "Reported by user:";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 10F);
-            label13.Location = new Point(21, 181);
-            label13.Name = "label13";
-            label13.Size = new Size(135, 23);
-            label13.TabIndex = 3;
-            label13.Text = "Type of incident:";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 10F);
-            label12.Location = new Point(21, 136);
-            label12.Name = "label12";
-            label12.Size = new Size(156, 23);
-            label12.TabIndex = 2;
-            label12.Text = "Subject of incident:";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 10F);
-            label11.Location = new Point(21, 95);
-            label11.Name = "label11";
-            label11.Size = new Size(165, 23);
-            label11.TabIndex = 1;
-            label11.Text = "Date/Time reported:";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(3, -1);
-            label10.Name = "label10";
-            label10.Size = new Size(343, 46);
-            label10.TabIndex = 0;
-            label10.Text = "Create New Incident";
-            // 
             // pnlUserOverview
             // 
             pnlUserOverview.Location = new Point(24, 150);
@@ -709,8 +514,6 @@
             tabPageIncidentManagement.PerformLayout();
             tabPageUserManagement.ResumeLayout(false);
             tabPageUserManagement.PerformLayout();
-            pnlCreateNewIncident.ResumeLayout(false);
-            pnlCreateNewIncident.PerformLayout();
             pnlCreateUser.ResumeLayout(false);
             pnlCreateUser.PerformLayout();
             ResumeLayout(false);
@@ -740,24 +543,6 @@
         private Label label9;
         private Button btnCreateIncident;
         private TextBox txtFilterByEmailIncident;
-        private Panel pnlCreateNewIncident;
-        private ComboBox comboBoxDeadline;
-        private ComboBox comboBoxPriority;
-        private ComboBox comboBoxUsername;
-        private ComboBox comboBoxTypeofIncident;
-        private TextBox txtBoxSubjectofIncident;
-        private ComboBox comboBoxReportTime;
-        private Label label16;
-        private Label label15;
-        private Label label14;
-        private Label label13;
-        private Label label12;
-        private Label label11;
-        private Label label10;
-        private Button btnSubmitIncident;
-        private Button btnCancelIncidentSubmission;
-        private TextBox textBoxDescription;
-        private Label label17;
         private Panel pnlCreateUser;
         private Label label18;
         private TextBox textBoxPhone;

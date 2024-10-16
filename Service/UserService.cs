@@ -30,5 +30,10 @@ namespace Service
         {
             return userdb.GetUserById(id);
         }
+
+        public List<User> GetAllUsers()
+        {
+            return userdb.GetAllUsers();
+        }
     }
 }

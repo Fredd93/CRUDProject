@@ -36,5 +36,16 @@ namespace DAL
             BsonDocument document = collection.Find(filter).First();
             return new User(document);
         }
+
+        public List<User> GetAllUsers()
+        {
+            List<User> users = new List<User>();
+            IMongoCollection<BsonDocument> collection = this.READCollection("User");
+            foreach (BsonDocument document in collection.Find(_ => true).ToListAsync().Result)
+            { //Get all users
+                users.Add(new User(document));
+            }
+            return users;
+        }
     }
 }

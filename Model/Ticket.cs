@@ -32,5 +32,16 @@ namespace Model
                 //this.End_Date = (DateTime)document["end_date"];
             }
         }
+
+        public Ticket(string title, string description, ObjectId user_id, Status status, DateTime start_Date, DateTime end_Date, Priority priority)
+        {
+            this.Title = title;
+            this.Description = description;
+            this.User_id = user_id;
+            this.Status = status;
+            this.Start_Date = start_Date;
+            this.End_Date = end_Date;
+            this.Priority = priority;
+        }
     }
 }
