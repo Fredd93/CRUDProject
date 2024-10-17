@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             pnlCreateNewIncident = new Panel();
+            comboBoxStatus = new ComboBox();
+            label2 = new Label();
             comboBoxHandler = new ComboBox();
             label1 = new Label();
             dateTimeDeadline = new DateTimePicker();
@@ -51,6 +53,8 @@
             // 
             // pnlCreateNewIncident
             // 
+            pnlCreateNewIncident.Controls.Add(comboBoxStatus);
+            pnlCreateNewIncident.Controls.Add(label2);
             pnlCreateNewIncident.Controls.Add(comboBoxHandler);
             pnlCreateNewIncident.Controls.Add(label1);
             pnlCreateNewIncident.Controls.Add(dateTimeDeadline);
@@ -73,6 +77,25 @@
             pnlCreateNewIncident.Size = new Size(578, 616);
             pnlCreateNewIncident.TabIndex = 5;
             // 
+            // comboBoxStatus
+            // 
+            comboBoxStatus.FormattingEnabled = true;
+            comboBoxStatus.Items.AddRange(new object[] { "Open", "Solved", "Closed" });
+            comboBoxStatus.Location = new Point(195, 314);
+            comboBoxStatus.Name = "comboBoxStatus";
+            comboBoxStatus.Size = new Size(319, 28);
+            comboBoxStatus.TabIndex = 22;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(21, 270);
+            label2.Name = "label2";
+            label2.Size = new Size(68, 23);
+            label2.TabIndex = 21;
+            label2.Text = "Priority:";
+            // 
             // comboBoxHandler
             // 
             comboBoxHandler.FormattingEnabled = true;
@@ -93,7 +116,7 @@
             // 
             // dateTimeDeadline
             // 
-            dateTimeDeadline.Location = new Point(195, 313);
+            dateTimeDeadline.Location = new Point(197, 360);
             dateTimeDeadline.Name = "dateTimeDeadline";
             dateTimeDeadline.Size = new Size(317, 27);
             dateTimeDeadline.TabIndex = 18;
@@ -118,7 +141,7 @@
             // 
             // btnCancelIncidentSubmission
             // 
-            btnCancelIncidentSubmission.Location = new Point(197, 548);
+            btnCancelIncidentSubmission.Location = new Point(195, 548);
             btnCancelIncidentSubmission.Name = "btnCancelIncidentSubmission";
             btnCancelIncidentSubmission.Size = new Size(125, 41);
             btnCancelIncidentSubmission.TabIndex = 15;
@@ -128,16 +151,16 @@
             // 
             // textBoxDescription
             // 
-            textBoxDescription.Location = new Point(195, 357);
+            textBoxDescription.Location = new Point(197, 404);
             textBoxDescription.Multiline = true;
             textBoxDescription.Name = "textBoxDescription";
-            textBoxDescription.Size = new Size(319, 158);
+            textBoxDescription.Size = new Size(319, 138);
             textBoxDescription.TabIndex = 14;
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(21, 360);
+            label17.Location = new Point(23, 407);
             label17.Name = "label17";
             label17.Size = new Size(88, 20);
             label17.TabIndex = 13;
@@ -147,7 +170,7 @@
             // 
             comboBoxPriority.FormattingEnabled = true;
             comboBoxPriority.Items.AddRange(new object[] { "Low", "Medium", "High" });
-            comboBoxPriority.Location = new Point(195, 268);
+            comboBoxPriority.Location = new Point(197, 269);
             comboBoxPriority.Name = "comboBoxPriority";
             comboBoxPriority.Size = new Size(319, 28);
             comboBoxPriority.TabIndex = 11;
@@ -171,7 +194,7 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 10F);
-            label16.Location = new Point(21, 313);
+            label16.Location = new Point(23, 360);
             label16.Name = "label16";
             label16.Size = new Size(161, 23);
             label16.TabIndex = 6;
@@ -181,11 +204,11 @@
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 10F);
-            label15.Location = new Point(21, 268);
+            label15.Location = new Point(23, 315);
             label15.Name = "label15";
-            label15.Size = new Size(68, 23);
+            label15.Size = new Size(60, 23);
             label15.TabIndex = 5;
-            label15.Text = "Priority:";
+            label15.Text = "Status:";
             // 
             // label14
             // 
@@ -263,5 +286,7 @@
         private DateTimePicker dateTimeDeadline;
         private ComboBox comboBoxHandler;
         private Label label1;
+        private ComboBox comboBoxStatus;
+        private Label label2;
     }
 }

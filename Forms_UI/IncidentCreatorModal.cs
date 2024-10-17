@@ -29,10 +29,12 @@ namespace Forms_UI
             userService = new UserService();
             PopulateReporterComboBox(userService.GetAllUsers());
             PopulateHandlerComboBox(userService.GetAllServiceUsers());
-            if (ticket == null) 
+            if (ticket == null)
             {
                 TopLabel.Text = "Create New Incident";
                 btnSubmitIncident.Text = "Submit Incident";
+                comboBoxStatus.SelectedIndex = 0;
+                comboBoxPriority.SelectedIndex = 0;
             }
             else
             {
@@ -40,11 +42,11 @@ namespace Forms_UI
                 btnSubmitIncident.Text = "Update Incident";
                 FillOutFields(ticket);
             }
-            
+
 
         }
 
-        private void FillOutFields(Ticket ticket) 
+        private void FillOutFields(Ticket ticket)
         {
             txtBoxSubjectofIncident.Text = ticket.Title;
             comboBoxPriority.SelectedIndex = (int)ticket.Priority;
@@ -69,13 +71,14 @@ namespace Forms_UI
             }
             dateTimeDeadline.Value = ticket.End_Date;
             dateTimeReportTime.Value = ticket.Start_Date;
+            comboBoxStatus.SelectedIndex = (int)ticket.Status;
         }
 
         private void PopulateReporterComboBox(List<User> users)
         {
             foreach (User user in users)
             {
-                
+
                 comboBoxUsername.Items.Add(user);
             }
         }
@@ -99,18 +102,27 @@ namespace Forms_UI
             try
             {
                 priority = (Priority)Enum.Parse(typeof(Priority), comboBoxPriority.Text);
-            }catch
+            }
+            catch
             {
                 priority = Priority.Low;
             }
-            
+            Status status;
+            try
+            {
+                status = (Status)Enum.Parse(typeof(Status), comboBoxStatus.Text);
+            }
+            catch
+            {
+                status = Status.Open;
+            }
+
             TicketService ticketService = new TicketService();
 
             ObjectId reporterid = ((User)(comboBoxUsername.SelectedItem)).Id;
             ObjectId handlerid = ((User)(comboBoxHandler.SelectedItem)).Id;
-            Ticket ticket = new Ticket(txtBoxSubjectofIncident.Text, textBoxDescription.Text, reporterid, handlerid, Status.open, dateTimeReportTime.Value, dateTimeDeadline.Value, priority);
-
-            if(this.ticket != null)
+            Ticket ticket = new Ticket(txtBoxSubjectofIncident.Text, textBoxDescription.Text, reporterid, handlerid, status, dateTimeReportTime.Value, dateTimeDeadline.Value, priority);
+            if (this.ticket != null)
             {
                 ticket.Id = this.ticket.Id;
                 ticketService.UpdateTicket(ticket);
@@ -120,7 +132,7 @@ namespace Forms_UI
                 ticketService.CreateNewTicket(ticket);
                 MessageBox.Show("Ticket succesfully added");
             }
-            
+
             mainForm.UpdateTicketView();
             this.Close();
         }

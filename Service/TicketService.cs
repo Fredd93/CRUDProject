@@ -24,17 +24,14 @@ namespace Service
         {
             return ticketdb.GetTicketsFromSearchQuery(query);
         }
-
         public void CreateNewTicket(Ticket ticket)
         {
             ticketdb.CreateNewTicket(ticket);
         }
-
         public void UpdateTicket(Ticket ticket)
         {
             ticketdb.UpdateTicket(ticket);
         }
-
         public void DeleteTicket(Ticket ticket)
         {
             ticketdb.DeleteTicket(ticket);

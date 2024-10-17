@@ -1,4 +1,5 @@
 ﻿using Model;
+using Model.Enums;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
@@ -86,6 +87,13 @@ namespace DAL
             var filter = Builders<Ticket>.Filter.Eq(t => t.Id, ticket.Id);
 
             collection.DeleteOne(filter);
+        }
+        public void UpdateTicketStatus(Ticket ticket, Status status)
+        {
+            IMongoCollection<Ticket> collection = base.mongoClient.GetDatabase("CRUDProject").GetCollection<Ticket>("Tickets");
+            var filter = Builders<Ticket>.Filter.Eq("_id", ticket.Id);
+            var update = Builders<Ticket>.Update.Set("Status", (int)status);
+            collection.UpdateOne(filter, update);
         }
     }
 }
