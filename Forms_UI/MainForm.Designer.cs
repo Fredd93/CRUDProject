@@ -44,40 +44,27 @@
             ticketView = new ListView();
             title = new ColumnHeader();
             description = new ColumnHeader();
-            status = new ColumnHeader();
             username = new ColumnHeader();
+            status = new ColumnHeader();
+            priority = new ColumnHeader();
             btnCreateIncident = new Button();
             txtFilterByEmailIncident = new TextBox();
             label9 = new Label();
             tabPageUserManagement = new TabPage();
-            pnlCreateUser = new Panel();
-            btnAddUser = new Button();
-            btnCancelAddUser = new Button();
-            textBoxPhone = new TextBox();
-            textBoxEmail = new TextBox();
-            txtLastName = new TextBox();
-            comboBoxTypeofUser = new ComboBox();
-            label24 = new Label();
-            label23 = new Label();
-            label22 = new Label();
-            label21 = new Label();
-            label20 = new Label();
-            comboBoxLocation = new ComboBox();
-            label19 = new Label();
-            txtFirstName = new TextBox();
-            label18 = new Label();
-            pnlUserOverview = new Panel();
+            usersList = new ListView();
+            firstNameColunm = new ColumnHeader();
+            lastNameColunm = new ColumnHeader();
+            emailColunm = new ColumnHeader();
+            roleColunm = new ColumnHeader();
             btnAddNewUser = new Button();
             txtFilterByEmail = new TextBox();
             label8 = new Label();
-            priority = new ColumnHeader();
             tabControl.SuspendLayout();
             tabPageDashboard.SuspendLayout();
             pnlIncidentsPDeadline.SuspendLayout();
             pnlUnresolvedIncidents.SuspendLayout();
             tabPageIncidentManagement.SuspendLayout();
             tabPageUserManagement.SuspendLayout();
-            pnlCreateUser.SuspendLayout();
             SuspendLayout();
             // 
             // label6
@@ -239,17 +226,22 @@
             description.Text = "Description";
             description.Width = 200;
             // 
+            // username
+            // 
+            username.DisplayIndex = 3;
+            username.Text = "Username";
+            username.Width = 200;
+            // 
             // status
             // 
             status.DisplayIndex = 2;
             status.Text = "Status";
             status.Width = 137;
             // 
-            // username
+            // priority
             // 
-            username.DisplayIndex = 3;
-            username.Text = "Username";
-            username.Width = 200;
+            priority.Text = "Priority";
+            priority.Width = 137;
             // 
             // btnCreateIncident
             // 
@@ -283,8 +275,7 @@
             // 
             // tabPageUserManagement
             // 
-            tabPageUserManagement.Controls.Add(pnlCreateUser);
-            tabPageUserManagement.Controls.Add(pnlUserOverview);
+            tabPageUserManagement.Controls.Add(usersList);
             tabPageUserManagement.Controls.Add(btnAddNewUser);
             tabPageUserManagement.Controls.Add(txtFilterByEmail);
             tabPageUserManagement.Controls.Add(label8);
@@ -297,167 +288,37 @@
             tabPageUserManagement.Text = "User Management";
             tabPageUserManagement.UseVisualStyleBackColor = true;
             // 
-            // pnlCreateUser
+            // usersList
             // 
-            pnlCreateUser.Controls.Add(btnAddUser);
-            pnlCreateUser.Controls.Add(btnCancelAddUser);
-            pnlCreateUser.Controls.Add(textBoxPhone);
-            pnlCreateUser.Controls.Add(textBoxEmail);
-            pnlCreateUser.Controls.Add(txtLastName);
-            pnlCreateUser.Controls.Add(comboBoxTypeofUser);
-            pnlCreateUser.Controls.Add(label24);
-            pnlCreateUser.Controls.Add(label23);
-            pnlCreateUser.Controls.Add(label22);
-            pnlCreateUser.Controls.Add(label21);
-            pnlCreateUser.Controls.Add(label20);
-            pnlCreateUser.Controls.Add(comboBoxLocation);
-            pnlCreateUser.Controls.Add(label19);
-            pnlCreateUser.Controls.Add(txtFirstName);
-            pnlCreateUser.Controls.Add(label18);
-            pnlCreateUser.Location = new Point(0, 0);
-            pnlCreateUser.Name = "pnlCreateUser";
-            pnlCreateUser.Size = new Size(924, 616);
-            pnlCreateUser.TabIndex = 17;
+            usersList.Columns.AddRange(new ColumnHeader[] { firstNameColunm, lastNameColunm, emailColunm, roleColunm });
+            usersList.FullRowSelect = true;
+            usersList.GridLines = true;
+            usersList.Location = new Point(24, 158);
+            usersList.Name = "usersList";
+            usersList.Size = new Size(878, 410);
+            usersList.TabIndex = 3;
+            usersList.UseCompatibleStateImageBehavior = false;
+            usersList.View = View.Details;
             // 
-            // btnAddUser
+            // firstNameColunm
             // 
-            btnAddUser.BackColor = Color.SkyBlue;
-            btnAddUser.Location = new Point(406, 407);
-            btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(125, 41);
-            btnAddUser.TabIndex = 14;
-            btnAddUser.Text = "Add User";
-            btnAddUser.UseVisualStyleBackColor = false;
+            firstNameColunm.Text = "First Name";
+            firstNameColunm.Width = 200;
             // 
-            // btnCancelAddUser
+            // lastNameColunm
             // 
-            btnCancelAddUser.Location = new Point(174, 407);
-            btnCancelAddUser.Name = "btnCancelAddUser";
-            btnCancelAddUser.Size = new Size(125, 41);
-            btnCancelAddUser.TabIndex = 13;
-            btnCancelAddUser.Text = "Cancel";
-            btnCancelAddUser.UseVisualStyleBackColor = true;
+            lastNameColunm.Text = "Last Name";
+            lastNameColunm.Width = 200;
             // 
-            // textBoxPhone
+            // emailColunm
             // 
-            textBoxPhone.Location = new Point(174, 285);
-            textBoxPhone.Name = "textBoxPhone";
-            textBoxPhone.Size = new Size(357, 27);
-            textBoxPhone.TabIndex = 12;
+            emailColunm.Text = "Email";
+            emailColunm.Width = 250;
             // 
-            // textBoxEmail
+            // roleColunm
             // 
-            textBoxEmail.Location = new Point(174, 234);
-            textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(357, 27);
-            textBoxEmail.TabIndex = 11;
-            // 
-            // txtLastName
-            // 
-            txtLastName.Location = new Point(174, 140);
-            txtLastName.Name = "txtLastName";
-            txtLastName.Size = new Size(357, 27);
-            txtLastName.TabIndex = 10;
-            // 
-            // comboBoxTypeofUser
-            // 
-            comboBoxTypeofUser.FormattingEnabled = true;
-            comboBoxTypeofUser.Location = new Point(174, 186);
-            comboBoxTypeofUser.Name = "comboBoxTypeofUser";
-            comboBoxTypeofUser.Size = new Size(357, 28);
-            comboBoxTypeofUser.TabIndex = 9;
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Font = new Font("Segoe UI", 10F);
-            label24.Location = new Point(17, 335);
-            label24.Name = "label24";
-            label24.Size = new Size(139, 23);
-            label24.TabIndex = 8;
-            label24.Text = "Location/Branch:";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 10F);
-            label23.Location = new Point(17, 285);
-            label23.Name = "label23";
-            label23.Size = new Size(128, 23);
-            label23.TabIndex = 7;
-            label23.Text = "Phone number:";
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Segoe UI", 10F);
-            label22.Location = new Point(17, 234);
-            label22.Name = "label22";
-            label22.Size = new Size(125, 23);
-            label22.TabIndex = 6;
-            label22.Text = "E-mail address:";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Segoe UI", 10F);
-            label21.Location = new Point(17, 186);
-            label21.Name = "label21";
-            label21.Size = new Size(106, 23);
-            label21.TabIndex = 5;
-            label21.Text = "Type of user:";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 10F);
-            label20.Location = new Point(17, 140);
-            label20.Name = "label20";
-            label20.Size = new Size(92, 23);
-            label20.TabIndex = 4;
-            label20.Text = "Last name:";
-            // 
-            // comboBoxLocation
-            // 
-            comboBoxLocation.FormattingEnabled = true;
-            comboBoxLocation.Location = new Point(174, 335);
-            comboBoxLocation.Name = "comboBoxLocation";
-            comboBoxLocation.Size = new Size(357, 28);
-            comboBoxLocation.TabIndex = 3;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 10F);
-            label19.Location = new Point(17, 90);
-            label19.Name = "label19";
-            label19.Size = new Size(93, 23);
-            label19.TabIndex = 2;
-            label19.Text = "First name:";
-            // 
-            // txtFirstName
-            // 
-            txtFirstName.Location = new Point(174, 90);
-            txtFirstName.Name = "txtFirstName";
-            txtFirstName.Size = new Size(357, 27);
-            txtFirstName.TabIndex = 1;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.Location = new Point(0, -1);
-            label18.Name = "label18";
-            label18.Size = new Size(284, 46);
-            label18.TabIndex = 0;
-            label18.Text = "Create New User";
-            // 
-            // pnlUserOverview
-            // 
-            pnlUserOverview.Location = new Point(24, 150);
-            pnlUserOverview.Name = "pnlUserOverview";
-            pnlUserOverview.Size = new Size(876, 433);
-            pnlUserOverview.TabIndex = 3;
+            roleColunm.Text = "Role";
+            roleColunm.Width = 200;
             // 
             // btnAddNewUser
             // 
@@ -468,6 +329,7 @@
             btnAddNewUser.TabIndex = 2;
             btnAddNewUser.Text = "+Add New User";
             btnAddNewUser.UseVisualStyleBackColor = false;
+            btnAddNewUser.Click += btnAddNewUser_Click;
             // 
             // txtFilterByEmail
             // 
@@ -486,11 +348,6 @@
             label8.Size = new Size(313, 46);
             label8.TabIndex = 0;
             label8.Text = "User Management";
-            // 
-            // priority
-            // 
-            priority.Text = "Priority";
-            priority.Width = 137;
             // 
             // MainForm
             // 
@@ -514,8 +371,6 @@
             tabPageIncidentManagement.PerformLayout();
             tabPageUserManagement.ResumeLayout(false);
             tabPageUserManagement.PerformLayout();
-            pnlCreateUser.ResumeLayout(false);
-            pnlCreateUser.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -539,31 +394,19 @@
         private Button btnAddNewUser;
         private TextBox txtFilterByEmail;
         private Label label8;
-        private Panel pnlUserOverview;
         private Label label9;
         private Button btnCreateIncident;
         private TextBox txtFilterByEmailIncident;
-        private Panel pnlCreateUser;
-        private Label label18;
-        private TextBox textBoxPhone;
-        private TextBox textBoxEmail;
-        private TextBox txtLastName;
-        private ComboBox comboBoxTypeofUser;
-        private Label label24;
-        private Label label23;
-        private Label label22;
-        private Label label21;
-        private Label label20;
-        private ComboBox comboBoxLocation;
-        private Label label19;
-        private TextBox txtFirstName;
-        private Button btnAddUser;
-        private Button btnCancelAddUser;
         private ListView ticketView;
         private ColumnHeader title;
         private ColumnHeader description;
         private ColumnHeader status;
         private ColumnHeader username;
         private ColumnHeader priority;
+        private ListView usersList;
+        private ColumnHeader firstNameColunm;
+        private ColumnHeader lastNameColunm;
+        private ColumnHeader emailColunm;
+        private ColumnHeader roleColunm;
     }
 }

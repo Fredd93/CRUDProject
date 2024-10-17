@@ -8,7 +8,6 @@ namespace Model.Enums
 {
     public enum Roles
     {
-        none,
         servicedeskemployee,
         employee,
     }

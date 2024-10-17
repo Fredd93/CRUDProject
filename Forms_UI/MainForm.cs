@@ -17,9 +17,13 @@ namespace Forms_UI
 {
     public partial class MainForm : Form
     {
+        UserService userService;
+        TicketService ticketService;
         public MainForm()
         {
             InitializeComponent();
+            userService = new UserService();
+            ticketService = new TicketService();
         }
 
         private void tabPageDashboard_Click(object sender, EventArgs e)
@@ -29,21 +33,8 @@ namespace Forms_UI
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            TicketService ticketService = new TicketService();
-            List<Ticket> tickets = ticketService.GetAllTickets();
-            PopulateTicketView(tickets);
-            PieChart chartUnresolved = new PieChart();
-            PieChart chartDeadline = new PieChart();
-            chartUnresolved.Size = new Size(250, 250);
-            chartDeadline.Size = new Size(250, 250);
-            chartUnresolved.Location = new Point(75, 75);
-            chartDeadline.Location = new Point(75, 75);
-            pnlUnresolvedIncidents.Controls.Add(chartUnresolved);
-            pnlIncidentsPDeadline.Controls.Add(chartDeadline);
-            chartDeadline.Colors = new Color[] { Color.Salmon, Color.LightGray };
-            chartDeadline.Values = new float[] { 50, 40 };
-            chartUnresolved.Colors = new Color[] { Color.Orange, Color.LightGray };
-            chartUnresolved.Values = new float[] { 50, 40 };
+            List<User> users = userService.GetAllUsers();
+            PopulateUserView(users);
         }
 
         private void txtFilterByEmailIncident_KeyPress(object sender, EventArgs e)
@@ -75,6 +66,38 @@ namespace Forms_UI
             }
         }
         //Keeping this method here in case problems occur
+
+
+
+        private void PopulateUserView(List<User> users)
+        {
+            usersList.Items.Clear();
+            foreach (User user in users)
+            {
+                // Populate ListView with correct values
+                ListViewItem li = new ListViewItem(new string[4]
+                {
+                    user.First_Name,
+                    user.Last_Name,
+                    user.Email,
+                    user.Role.ToString()  // Ensure the role is shown as a string
+                });
+                li.Tag = user;
+                usersList.Items.Add(li);
+            }
+        }
+
+
+        private ListViewItem CreateUserListViewItem(User user)
+        {
+            return new ListViewItem(new string[4] {
+                user.First_Name,
+                user.Last_Name,
+                user.Username,
+                user.Role.ToString()
+            })
+            { Tag = user };
+        }
         private List<Ticket> SearchForTickets(string text)
         {
             string query = text.ToLower(); //Make the query lowercase for simplicity,
@@ -115,5 +138,13 @@ namespace Forms_UI
             IncidentCreatorModal incidentCreatorModal = new IncidentCreatorModal(this);
             incidentCreatorModal.ShowDialog();
         }
+
+        private void btnAddNewUser_Click(object sender, EventArgs e)
+        {
+            CreateUserForm createUserForm = new CreateUserForm();
+            createUserForm.Show();
+        }
+
+
     }
 }

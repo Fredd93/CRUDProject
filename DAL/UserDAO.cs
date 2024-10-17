@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
+using System.Security.Cryptography;
+using Model.Enums;
 
 namespace DAL
 {
@@ -47,5 +49,46 @@ namespace DAL
             }
             return users;
         }
+
+        public void CreateUser(User user)
+        {
+            // Hash the user's password before saving
+            user.Password = HashPassword(user.Password);
+
+            // Create a BSON document with fields in the desired order
+            var userDocument = new BsonDocument
+            {
+                { "_id", ObjectId.GenerateNewId() },               
+                { "last_name", user.Last_Name },                  
+                { "first_name", user.First_Name },                 
+                { "username", user.Username },                     
+                { "password", user.Password },                    
+                { "role", user.Role.ToString() },                 
+                { "email", user.Email }                            
+            };
+
+            // Get the MongoDB collection and insert the user document
+            IMongoCollection<BsonDocument> collection = base.mongoClient.GetDatabase("CRUDProject").GetCollection<BsonDocument>("User");
+            collection.InsertOne(userDocument);
+        }
+
+
+
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                // Convert the byte array to a string
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Model;
+using Model.Enums;
+using MongoDB.Bson;
 using Service;
 using Service;
 namespace UI
@@ -7,34 +9,36 @@ namespace UI
     {
         static void Main(string[] args)
         {
-            List<Ticket> values = new List<Ticket>();
-            Console.WriteLine("What is your search query?");
-            string query = Console.ReadLine().ToLower(); //Make the query lowercase for simplicity,
-                                                         //also avoids having to look for both 'and' and 'AND'. Same with 'or' and 'OR'
-            query = query.Replace(", ", " or "); //turn every , into an 'or'. Other way around would work too
-            query = query.Replace(" & ", " and "); //turn every & into an 'and'. Other way around would work too
-            string[] splits = query.Split(" or "); //split the query into pieces to search for the different keywords
-            List<Ticket> results = new List<Ticket>();
-            foreach(string s in splits)
-            {
-                string[] searchKeywords = s.Split(" and "); //split any keywords with an 'and' in them
-                foreach (Ticket ticket in values)
-                {
-                    bool hasKeywords = true; 
-                    foreach (string keyword in searchKeywords)
-                    {
-                        string trimmedKeyword = keyword.Trim(); //remove trailing whitespace that could mess up the search
-                        if (!ticket.Title.ToLower().Contains(trimmedKeyword)) { hasKeywords = false; break; } //set to lowercase to avoid capitalization mistakes
-                    }
-                    if (hasKeywords && !results.Contains(ticket)) //if there isn't already a copy in the list,
-                                                                 //because the query has 2 keywords that apply
-                    {
-                        results.Add(ticket);
-                    }
-                }
-            }
-            foreach (Ticket ticket in results) { Console.WriteLine(ticket.Title); }
-            
+            UserService userService = new UserService();
+
+            // Prompt user for input to create a new user
+            Console.WriteLine("Enter First Name:");
+            string firstName = Console.ReadLine();
+
+            Console.WriteLine("Enter Last Name:");
+            string lastName = Console.ReadLine();
+
+            Console.WriteLine("Enter Username:");
+            string username = Console.ReadLine();
+
+            Console.WriteLine("Enter Password:");
+            string password = Console.ReadLine();
+
+            Console.WriteLine("Enter Email:");
+            string email = Console.ReadLine();
+
+            Console.WriteLine("Enter Role (employee/servicedeskemployee):");
+            string roleInput = Console.ReadLine();
+            Enum.TryParse(roleInput, true, out Roles role); // Parsing string input into Roles enum
+
+            // Create a new user object using the new constructor
+            User newUser = new User(ObjectId.GenerateNewId(), firstName, lastName, username, password, email, role);
+
+            // Save the new user to the database
+            userService.CreateUser(newUser);
+
+            Console.WriteLine("User created successfully!");
+
         }
         
     }

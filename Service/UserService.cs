@@ -35,5 +35,10 @@ namespace Service
         {
             return userdb.GetAllUsers();
         }
+        public void CreateUser(User user)
+        {
+            userdb.CreateUser(user);
+        }
+
     }
 }

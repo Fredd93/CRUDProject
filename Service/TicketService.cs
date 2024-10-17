@@ -1,5 +1,6 @@
 ﻿using DAL;
 using Model;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,12 @@ namespace Service
         public void CreateNewTicket(Ticket ticket)
         {
             ticketdb.CreateNewTicket(ticket);
+        }
+
+        
+        public void TransferTicket(ObjectId ticketId, ObjectId newHandlerId)
+        {
+            ticketdb.TransferTicket(ticketId, newHandlerId);
         }
     }
 }

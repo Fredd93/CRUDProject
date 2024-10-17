@@ -831,19 +831,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\daanp\\.nuget\\packages\\": {}
+    "C:\\Users\\Gebruikerr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Service\\Service.csproj",
+      "projectUniqueName": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Service\\Service.csproj",
-      "packagesPath": "C:\\Users\\daanp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Service\\obj\\",
+      "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Service\\Service.csproj",
+      "packagesPath": "C:\\Users\\Gebruikerr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\daanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gebruikerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -851,18 +851,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\daanp\\source\\repos\\CRUDProject\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\DAL\\DAL.csproj"
+            "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\daanp\\source\\repos\\CRUDProject\\Model\\Model.csproj"
+            "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj"
             }
           }
         }
@@ -903,7 +902,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

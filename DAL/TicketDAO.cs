@@ -66,5 +66,13 @@ namespace DAL
             IMongoCollection<Ticket> collection = base.mongoClient.GetDatabase("CRUDProject").GetCollection<Ticket>("Tickets");
             collection.InsertOne(ticket);
         }
+
+        public void TransferTicket(ObjectId ticketId, ObjectId newHandlerId)
+        {
+            var collection = this.READCollection("Tickets");
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", ticketId);
+            var update = Builders<BsonDocument>.Update.Set("Handler_id", newHandlerId);  // Update the Handler_id
+            collection.UpdateOne(filter, update);
+        }
     }
 }
