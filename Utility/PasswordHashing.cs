@@ -5,7 +5,6 @@ namespace Utility
 {
     public class PasswordHashing
     {
-        // Method to hash a plain text password using SHA-256
         public static string HashPassword(string password)
         {
             using (SHA256 sha256 = SHA256.Create())
