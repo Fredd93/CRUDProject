@@ -34,15 +34,15 @@
             label20 = new Label();
             label21 = new Label();
             label22 = new Label();
-            label23 = new Label();
             comboBoxTypeofUser = new ComboBox();
             lastNameTextBox = new TextBox();
             emailTextBox = new TextBox();
-            phoneNumberTextBox = new TextBox();
-            this.cancelButton = new Button();
+            cancelButton = new Button();
             addUserButton = new Button();
             pnlCreateUser = new Panel();
-            passwordTextBox = new TextBox();
+            txtConfirmPassword = new TextBox();
+            lblConfirmPassword = new Label();
+            txtPassword = new TextBox();
             label1 = new Label();
             pnlCreateUser.SuspendLayout();
             SuspendLayout();
@@ -104,16 +104,6 @@
             label22.TabIndex = 6;
             label22.Text = "E-mail address:";
             // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 10F);
-            label23.Location = new Point(17, 285);
-            label23.Name = "label23";
-            label23.Size = new Size(128, 23);
-            label23.TabIndex = 7;
-            label23.Text = "Phone number:";
-            // 
             // comboBoxTypeofUser
             // 
             comboBoxTypeofUser.FormattingEnabled = true;
@@ -136,27 +126,20 @@
             emailTextBox.Size = new Size(357, 27);
             emailTextBox.TabIndex = 11;
             // 
-            // phoneNumberTextBox
-            // 
-            phoneNumberTextBox.Location = new Point(174, 285);
-            phoneNumberTextBox.Name = "phoneNumberTextBox";
-            phoneNumberTextBox.Size = new Size(357, 27);
-            phoneNumberTextBox.TabIndex = 12;
-            // 
             // cancelButton
             // 
-            this.cancelButton.Location = new Point(174, 433);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new Size(125, 41);
-            this.cancelButton.TabIndex = 13;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += this.btnCancelAddUser_Click;
+            cancelButton.Location = new Point(174, 380);
+            cancelButton.Name = "cancelButton";
+            cancelButton.Size = new Size(125, 41);
+            cancelButton.TabIndex = 13;
+            cancelButton.Text = "Cancel";
+            cancelButton.UseVisualStyleBackColor = true;
+            cancelButton.Click += btnCancelAddUser_Click;
             // 
             // addUserButton
             // 
             addUserButton.BackColor = Color.SkyBlue;
-            addUserButton.Location = new Point(406, 433);
+            addUserButton.Location = new Point(406, 380);
             addUserButton.Name = "addUserButton";
             addUserButton.Size = new Size(125, 41);
             addUserButton.TabIndex = 14;
@@ -166,15 +149,15 @@
             // 
             // pnlCreateUser
             // 
-            pnlCreateUser.Controls.Add(passwordTextBox);
+            pnlCreateUser.Controls.Add(txtConfirmPassword);
+            pnlCreateUser.Controls.Add(lblConfirmPassword);
+            pnlCreateUser.Controls.Add(txtPassword);
             pnlCreateUser.Controls.Add(label1);
             pnlCreateUser.Controls.Add(addUserButton);
-            pnlCreateUser.Controls.Add(this.cancelButton);
-            pnlCreateUser.Controls.Add(phoneNumberTextBox);
+            pnlCreateUser.Controls.Add(cancelButton);
             pnlCreateUser.Controls.Add(emailTextBox);
             pnlCreateUser.Controls.Add(lastNameTextBox);
             pnlCreateUser.Controls.Add(comboBoxTypeofUser);
-            pnlCreateUser.Controls.Add(label23);
             pnlCreateUser.Controls.Add(label22);
             pnlCreateUser.Controls.Add(label21);
             pnlCreateUser.Controls.Add(label20);
@@ -183,35 +166,51 @@
             pnlCreateUser.Controls.Add(label18);
             pnlCreateUser.Location = new Point(12, 12);
             pnlCreateUser.Name = "pnlCreateUser";
-            pnlCreateUser.Size = new Size(586, 561);
+            pnlCreateUser.Size = new Size(586, 452);
             pnlCreateUser.TabIndex = 18;
             // 
-            // passwordTextBox
+            // txtConfirmPassword
             // 
-            passwordTextBox.Location = new Point(174, 342);
-            passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(357, 27);
-            passwordTextBox.TabIndex = 16;
-            passwordTextBox.TextChanged += textBox1_TextChanged;
+            txtConfirmPassword.Location = new Point(174, 335);
+            txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.Size = new Size(357, 27);
+            txtConfirmPassword.TabIndex = 18;
+            // 
+            // lblConfirmPassword
+            // 
+            lblConfirmPassword.AutoSize = true;
+            lblConfirmPassword.Font = new Font("Segoe UI", 10F);
+            lblConfirmPassword.Location = new Point(17, 335);
+            lblConfirmPassword.Name = "lblConfirmPassword";
+            lblConfirmPassword.Size = new Size(151, 23);
+            lblConfirmPassword.TabIndex = 17;
+            lblConfirmPassword.Text = "Confirm password:";
+            // 
+            // txtPassword
+            // 
+            txtPassword.Location = new Point(174, 284);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(357, 27);
+            txtPassword.TabIndex = 16;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(17, 342);
+            label1.Location = new Point(17, 284);
             label1.Name = "label1";
             label1.Size = new Size(80, 23);
             label1.TabIndex = 15;
             label1.Text = "Password";
             // 
-            // Form1
+            // CreateUserForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1113, 718);
+            ClientSize = new Size(645, 488);
             Controls.Add(pnlCreateUser);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "CreateUserForm";
+            Text = "Create User";
             Load += Form1_Load;
             pnlCreateUser.ResumeLayout(false);
             pnlCreateUser.PerformLayout();
@@ -227,17 +226,17 @@
         private Label label20;
         private Label label21;
         private Label label22;
-        private Label label23;
         private Label label24;
         private ComboBox comboBoxTypeofUser;
         private TextBox lastNameTextBox;
         private TextBox emailTextBox;
-        private TextBox phoneNumberTextBox;
         private Button cancelButton;
         private Button btnCancelAddUser;
         private Button addUserButton;
         private Panel pnlCreateUser;
-        private TextBox passwordTextBox;
+        private TextBox txtPassword;
         private Label label1;
+        private TextBox txtConfirmPassword;
+        private Label lblConfirmPassword;
     }
 }

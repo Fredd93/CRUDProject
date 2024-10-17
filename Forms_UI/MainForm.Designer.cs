@@ -51,6 +51,8 @@
             txtFilterByEmailIncident = new TextBox();
             label9 = new Label();
             tabPageUserManagement = new TabPage();
+            btnDeleteUser = new Button();
+            btnUpdateUser = new Button();
             usersList = new ListView();
             firstNameColunm = new ColumnHeader();
             lastNameColunm = new ColumnHeader();
@@ -275,6 +277,8 @@
             // 
             // tabPageUserManagement
             // 
+            tabPageUserManagement.Controls.Add(btnDeleteUser);
+            tabPageUserManagement.Controls.Add(btnUpdateUser);
             tabPageUserManagement.Controls.Add(usersList);
             tabPageUserManagement.Controls.Add(btnAddNewUser);
             tabPageUserManagement.Controls.Add(txtFilterByEmail);
@@ -287,6 +291,28 @@
             tabPageUserManagement.TabIndex = 2;
             tabPageUserManagement.Text = "User Management";
             tabPageUserManagement.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteUser
+            // 
+            btnDeleteUser.BackColor = Color.SkyBlue;
+            btnDeleteUser.Location = new Point(561, 80);
+            btnDeleteUser.Name = "btnDeleteUser";
+            btnDeleteUser.Size = new Size(147, 47);
+            btnDeleteUser.TabIndex = 5;
+            btnDeleteUser.Text = "Delete user";
+            btnDeleteUser.UseVisualStyleBackColor = false;
+            btnDeleteUser.Click += btnDeleteUser_Click;
+            // 
+            // btnUpdateUser
+            // 
+            btnUpdateUser.BackColor = Color.SkyBlue;
+            btnUpdateUser.Location = new Point(370, 80);
+            btnUpdateUser.Name = "btnUpdateUser";
+            btnUpdateUser.Size = new Size(147, 47);
+            btnUpdateUser.TabIndex = 4;
+            btnUpdateUser.Text = "Update user";
+            btnUpdateUser.UseVisualStyleBackColor = false;
+            btnUpdateUser.Click += btnUpdateUser_Click;
             // 
             // usersList
             // 
@@ -403,10 +429,12 @@
         private ColumnHeader status;
         private ColumnHeader username;
         private ColumnHeader priority;
-        private ListView usersList;
         private ColumnHeader firstNameColunm;
         private ColumnHeader lastNameColunm;
         private ColumnHeader emailColunm;
         private ColumnHeader roleColunm;
+        private Button btnDeleteUser;
+        private Button btnUpdateUser;
+        public ListView usersList;
     }
 }

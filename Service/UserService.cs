@@ -40,5 +40,14 @@ namespace Service
             userdb.CreateUser(user);
         }
 
+        public void DeleteUser(ObjectId id)
+        {
+            userdb.DeleteUser(id);
+        }
+        
+        public void UpdateUser(User user)
+        {
+            userdb.UpdateUser(user);
+        }
     }
 }

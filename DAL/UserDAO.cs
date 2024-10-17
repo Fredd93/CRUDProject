@@ -52,10 +52,8 @@ namespace DAL
 
         public void CreateUser(User user)
         {
-            // Hash the user's password before saving
             user.Password = HashPassword(user.Password);
 
-            // Create a BSON document with fields in the desired order
             var userDocument = new BsonDocument
             {
                 { "_id", ObjectId.GenerateNewId() },               
@@ -67,7 +65,6 @@ namespace DAL
                 { "email", user.Email }                            
             };
 
-            // Get the MongoDB collection and insert the user document
             IMongoCollection<BsonDocument> collection = base.mongoClient.GetDatabase("CRUDProject").GetCollection<BsonDocument>("User");
             collection.InsertOne(userDocument);
         }
@@ -89,6 +86,24 @@ namespace DAL
                 return builder.ToString();
             }
         }
+        public void DeleteUser(ObjectId id)
+        {
+            IMongoCollection<BsonDocument> collection = this.READCollection("User");
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", id);
+            collection.DeleteOne(filter);
+        }
 
+        public void UpdateUser(User user)
+        {
+            IMongoCollection<BsonDocument> collection = this.READCollection("User");
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", user.Id);
+            var update = Builders<BsonDocument>.Update
+                .Set("first_name", user.First_Name)
+                .Set("last_name", user.Last_Name)
+                .Set("email", user.Email)
+                .Set("role", user.Role);
+
+            collection.UpdateOne(filter, update);
+        }
     }
 }

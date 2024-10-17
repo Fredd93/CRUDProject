@@ -23,6 +23,8 @@ public class User
         this.Role = role;
     }
 
+    public User() { }
+
     // Constructor to handle BSONDocument from MongoDB
     public User(BsonDocument document)
     {

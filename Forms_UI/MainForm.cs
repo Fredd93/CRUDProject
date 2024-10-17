@@ -145,6 +145,33 @@ namespace Forms_UI
             createUserForm.Show();
         }
 
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+            if (usersList.SelectedItems.Count > 0)
+            {
+                User selectedUser = (User)usersList.SelectedItems[0].Tag;
 
+                userService.DeleteUser(selectedUser.Id);
+
+                MessageBox.Show("User updated successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Please select a user to update.");
+            }
+        }
+
+        private void btnUpdateUser_Click(object sender, EventArgs e)
+        {
+            if (usersList.SelectedItems.Count > 0) 
+            {
+                UpdateUserForm updateUserForm = new UpdateUserForm();
+                updateUserForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Select a user to update");
+            }
+        }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj": {}
+    "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
+    "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj",
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\Gebruikerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\obj\\",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gebruikerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,7 +47,7 @@
           "dependencies": {
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.29.0, )"
+              "version": "[3.0.0, )"
             }
           },
           "imports": [
@@ -66,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

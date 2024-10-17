@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Forms_UI\\Forms_UI.csproj": {}
+    "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\DAL\\DAL.csproj": {
+    "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\DAL\\DAL.csproj",
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Gebruikerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\DAL\\obj\\",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gebruikerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj"
+              "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+                "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj"
               }
             }
           }
@@ -51,7 +51,7 @@
           "dependencies": {
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.29.0, )"
+              "version": "[3.0.0, )"
             }
           },
           "imports": [
@@ -70,21 +70,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Forms_UI\\Forms_UI.csproj": {
+    "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
         "projectName": "Forms_UI",
-        "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
-        "packagesPath": "C:\\Users\\Gebruikerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Forms_UI\\obj\\",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\Forms_UI.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\Forms_UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gebruikerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,11 +98,11 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj"
+              "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+                "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj"
               },
-              "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Service\\Service.csproj"
+              "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj": {
+                "projectPath": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj"
               }
             }
           }
@@ -140,21 +140,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
+    "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj",
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\Gebruikerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\obj\\",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gebruikerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -187,7 +187,7 @@
           "dependencies": {
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.29.0, )"
+              "version": "[3.0.0, )"
             }
           },
           "imports": [
@@ -206,21 +206,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Service\\Service.csproj": {
+    "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Service\\Service.csproj",
+        "projectUniqueName": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\Gebruikerr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Service\\obj\\",
+        "projectPath": "F:\\2.1 Project\\CRUDProject\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\tabee\\.nuget\\packages\\",
+        "outputPath": "F:\\2.1 Project\\CRUDProject\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gebruikerr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tabee\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -234,11 +234,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\DAL\\DAL.csproj"
+              "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj": {
+                "projectPath": "F:\\2.1 Project\\CRUDProject\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Gebruikerr\\source\\repos\\CRUDProject\\Model\\Model.csproj"
+              "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj": {
+                "projectPath": "F:\\2.1 Project\\CRUDProject\\Model\\Model.csproj"
               }
             }
           }
@@ -260,7 +260,7 @@
           "dependencies": {
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.29.0, )"
+              "version": "[3.0.0, )"
             }
           },
           "imports": [
@@ -279,7 +279,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
