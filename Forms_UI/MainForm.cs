@@ -12,6 +12,7 @@ using Model;
 using Model.Enums;
 using static MongoDB.Driver.WriteConcern;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using MongoDB.Bson;
 
 namespace Forms_UI
 {
@@ -29,9 +30,7 @@ namespace Forms_UI
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            TicketService ticketService = new TicketService();
-            List<Ticket> tickets = ticketService.GetAllTickets();
-            PopulateTicketView(tickets);
+            
             PieChart chartUnresolved = new PieChart();
             PieChart chartDeadline = new PieChart();
             chartUnresolved.Size = new Size(250, 250);
@@ -67,14 +66,9 @@ namespace Forms_UI
             ticketView.Items.Clear();
             foreach (Ticket ticket in tickets)
             {
-<<<<<<< HEAD
-                //Title, description, status, user id, duration
-                ListViewItem li = new ListViewItem(new string[4] { ticket.Title, ticket.Description, ticket.Status.ToString(), ticket.Reporter_id.ToString() });
-=======
                 //Title, description, username, status, priority
                 UserService userService = new UserService();
-                ListViewItem li = new ListViewItem(new string[5] { ticket.Title, ticket.Description, userService.GetUserById(ticket.User_id).ToString(), ticket.Status.ToString(), ((Priority)ticket.Priority).ToString() });
->>>>>>> main
+                ListViewItem li = new ListViewItem(new string[5] { ticket.Title, ticket.Description, userService.GetUserById(ticket.Reporter_id).ToString(), ticket.Status.ToString(), ((Priority)ticket.Priority).ToString() });
                 li.Tag = ticket;
                 ticketView.Items.Add(li);
             }
@@ -112,13 +106,59 @@ namespace Forms_UI
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (tabControl.SelectedIndex == 0)
+            {
+                //Update piecharts with new data
+            }
+            else if (tabControl.SelectedIndex == 1)
+            {
+                //Disable update and delete buttons until something is selected
+                UpdateTicketView();
+                btnDeleteIncident.Enabled = false;
+                btnUpdateIncident.Enabled = false;
+            }
         }
 
         private void btnCreateIncident_Click(object sender, EventArgs e)
         {
-            IncidentCreatorModal incidentCreatorModal = new IncidentCreatorModal(this);
+            IncidentCreatorModal incidentCreatorModal = new IncidentCreatorModal(this, null);
             incidentCreatorModal.ShowDialog();
+        }
+
+        private void ticketView_SelectedIndexChanged(object sender, EventArgs e)
+        {//Disables the update and delete buttons if no ticket is selected
+            try{if (ticketView.SelectedItems[0] != null){
+                    btnDeleteIncident.Enabled = true;
+                    btnUpdateIncident.Enabled = true;
+                }
+            }catch{
+                btnDeleteIncident.Enabled = false;
+                btnUpdateIncident.Enabled = false;
+            }
+        }
+
+        private void btnUpdateIncident_Click(object sender, EventArgs e)
+        {
+            IncidentCreatorModal incidentCreatorModal = new IncidentCreatorModal(this, (Ticket)ticketView.SelectedItems[0].Tag);
+            incidentCreatorModal.ShowDialog();
+        }
+
+        private void btnDeleteIncident_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this ticket?", "Warning", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                TicketService ticketService = new TicketService();
+                ticketService.DeleteTicket((Ticket)ticketView.SelectedItems[0].Tag);
+                UpdateTicketView();
+            }
+        }
+
+            public void UpdateTicketView()
+        {
+            TicketService ticketService = new TicketService();
+            List<Ticket> tickets = ticketService.GetAllTickets();
+            PopulateTicketView(tickets);
         }
     }
 }

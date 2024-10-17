@@ -41,11 +41,14 @@
             label2 = new Label();
             label1 = new Label();
             tabPageIncidentManagement = new TabPage();
+            btnDeleteIncident = new Button();
+            btnUpdateIncident = new Button();
             ticketView = new ListView();
             title = new ColumnHeader();
             description = new ColumnHeader();
-            status = new ColumnHeader();
             username = new ColumnHeader();
+            status = new ColumnHeader();
+            priority = new ColumnHeader();
             btnCreateIncident = new Button();
             txtFilterByEmailIncident = new TextBox();
             label9 = new Label();
@@ -70,7 +73,6 @@
             btnAddNewUser = new Button();
             txtFilterByEmail = new TextBox();
             label8 = new Label();
-            priority = new ColumnHeader();
             tabControl.SuspendLayout();
             tabPageDashboard.SuspendLayout();
             pnlIncidentsPDeadline.SuspendLayout();
@@ -205,6 +207,8 @@
             // 
             // tabPageIncidentManagement
             // 
+            tabPageIncidentManagement.Controls.Add(btnDeleteIncident);
+            tabPageIncidentManagement.Controls.Add(btnUpdateIncident);
             tabPageIncidentManagement.Controls.Add(ticketView);
             tabPageIncidentManagement.Controls.Add(btnCreateIncident);
             tabPageIncidentManagement.Controls.Add(txtFilterByEmailIncident);
@@ -217,17 +221,41 @@
             tabPageIncidentManagement.Text = "Incident Management";
             tabPageIncidentManagement.UseVisualStyleBackColor = true;
             // 
+            // btnDeleteIncident
+            // 
+            btnDeleteIncident.BackColor = Color.Salmon;
+            btnDeleteIncident.Location = new Point(758, 71);
+            btnDeleteIncident.Name = "btnDeleteIncident";
+            btnDeleteIncident.Size = new Size(147, 47);
+            btnDeleteIncident.TabIndex = 5;
+            btnDeleteIncident.Text = "Delete Incident";
+            btnDeleteIncident.UseVisualStyleBackColor = false;
+            btnDeleteIncident.Click += btnDeleteIncident_Click;
+            // 
+            // btnUpdateIncident
+            // 
+            btnUpdateIncident.BackColor = Color.White;
+            btnUpdateIncident.Location = new Point(589, 71);
+            btnUpdateIncident.Name = "btnUpdateIncident";
+            btnUpdateIncident.Size = new Size(147, 47);
+            btnUpdateIncident.TabIndex = 4;
+            btnUpdateIncident.Text = "Update Incident";
+            btnUpdateIncident.UseVisualStyleBackColor = false;
+            btnUpdateIncident.Click += btnUpdateIncident_Click;
+            // 
             // ticketView
             // 
             ticketView.Columns.AddRange(new ColumnHeader[] { title, description, username, status, priority });
             ticketView.FullRowSelect = true;
             ticketView.GridLines = true;
             ticketView.Location = new Point(27, 171);
+            ticketView.MultiSelect = false;
             ticketView.Name = "ticketView";
             ticketView.Size = new Size(878, 410);
             ticketView.TabIndex = 3;
             ticketView.UseCompatibleStateImageBehavior = false;
             ticketView.View = View.Details;
+            ticketView.SelectedIndexChanged += ticketView_SelectedIndexChanged;
             // 
             // title
             // 
@@ -239,22 +267,27 @@
             description.Text = "Description";
             description.Width = 200;
             // 
-            // status
-            // 
-            status.DisplayIndex = 2;
-            status.Text = "Status";
-            status.Width = 137;
-            // 
             // username
             // 
             username.DisplayIndex = 3;
             username.Text = "Username";
             username.Width = 200;
             // 
+            // status
+            // 
+            status.DisplayIndex = 2;
+            status.Text = "Status";
+            status.Width = 137;
+            // 
+            // priority
+            // 
+            priority.Text = "Priority";
+            priority.Width = 137;
+            // 
             // btnCreateIncident
             // 
             btnCreateIncident.BackColor = Color.SkyBlue;
-            btnCreateIncident.Location = new Point(757, 71);
+            btnCreateIncident.Location = new Point(421, 71);
             btnCreateIncident.Name = "btnCreateIncident";
             btnCreateIncident.Size = new Size(147, 47);
             btnCreateIncident.TabIndex = 2;
@@ -487,11 +520,6 @@
             label8.TabIndex = 0;
             label8.Text = "User Management";
             // 
-            // priority
-            // 
-            priority.Text = "Priority";
-            priority.Width = 137;
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -565,5 +593,7 @@
         private ColumnHeader status;
         private ColumnHeader username;
         private ColumnHeader priority;
+        private Button btnDeleteIncident;
+        private Button btnUpdateIncident;
     }
 }

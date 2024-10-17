@@ -16,17 +16,59 @@ namespace Forms_UI
 {
     public partial class IncidentCreatorModal : Form
     {
+        Ticket ticket;
+        UserService userService;
         MainForm mainForm;
-        public IncidentCreatorModal(MainForm parentForm)
+        public IncidentCreatorModal(MainForm main, Ticket ticket)
         {
             InitializeComponent();
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            mainForm = parentForm;
-            UserService userService = new UserService();
+            this.ticket = ticket;
+            this.mainForm = main;
+            userService = new UserService();
             PopulateReporterComboBox(userService.GetAllUsers());
             PopulateHandlerComboBox(userService.GetAllServiceUsers());
+            if (ticket == null) 
+            {
+                TopLabel.Text = "Create New Incident";
+                btnSubmitIncident.Text = "Submit Incident";
+            }
+            else
+            {
+                TopLabel.Text = "Update Incident";
+                btnSubmitIncident.Text = "Update Incident";
+                FillOutFields(ticket);
+            }
+            
 
+        }
+
+        private void FillOutFields(Ticket ticket) 
+        {
+            txtBoxSubjectofIncident.Text = ticket.Title;
+            comboBoxPriority.SelectedIndex = (int)ticket.Priority;
+            textBoxDescription.Text = ticket.Description;
+            foreach (User user in comboBoxUsername.Items)
+            {
+                // If the UserId of the Ticket matches the Id of the User, select it
+                if (user.Id == ticket.Reporter_id)
+                {
+                    comboBoxUsername.SelectedItem = user;
+                    break;
+                }
+            }
+            foreach (User user in comboBoxHandler.Items)
+            {
+                // If the UserId of the Ticket matches the Id of the User, select it
+                if (user.Id == ticket.Handler_id)
+                {
+                    comboBoxHandler.SelectedItem = user;
+                    break;
+                }
+            }
+            dateTimeDeadline.Value = ticket.End_Date;
+            dateTimeReportTime.Value = ticket.Start_Date;
         }
 
         private void PopulateReporterComboBox(List<User> users)
@@ -68,8 +110,18 @@ namespace Forms_UI
             ObjectId handlerid = ((User)(comboBoxHandler.SelectedItem)).Id;
             Ticket ticket = new Ticket(txtBoxSubjectofIncident.Text, textBoxDescription.Text, reporterid, handlerid, Status.open, dateTimeReportTime.Value, dateTimeDeadline.Value, priority);
 
-            ticketService.CreateNewTicket(ticket);
-            MessageBox.Show("Ticket succesfully added");
+            if(this.ticket != null)
+            {
+                ticket.Id = this.ticket.Id;
+                ticketService.UpdateTicket(ticket);
+            }
+            else
+            {
+                ticketService.CreateNewTicket(ticket);
+                MessageBox.Show("Ticket succesfully added");
+            }
+            
+            mainForm.UpdateTicketView();
             this.Close();
         }
 

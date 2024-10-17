@@ -29,5 +29,15 @@ namespace Service
         {
             ticketdb.CreateNewTicket(ticket);
         }
+
+        public void UpdateTicket(Ticket ticket)
+        {
+            ticketdb.UpdateTicket(ticket);
+        }
+
+        public void DeleteTicket(Ticket ticket)
+        {
+            ticketdb.DeleteTicket(ticket);
+        }
     }
 }

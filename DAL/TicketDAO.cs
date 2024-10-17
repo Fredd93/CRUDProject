@@ -13,11 +13,15 @@ namespace DAL
 {
     public class TicketDAO : BaseDao
     {
+        IMongoCollection<BsonDocument> collection;
+        public TicketDAO() 
+        {
+            collection = this.READCollection("Tickets");
+        }
         public List<Ticket> GetAllTickets()
         {
             List<Ticket> tickets = new List<Ticket>();
-            IMongoCollection<BsonDocument> collection = this.READCollection("Tickets");
-            foreach (BsonDocument document in collection.Find(_ => true).ToListAsync().Result)
+            foreach (BsonDocument document in collection.Find(_ => true).Limit(50).ToListAsync().Result)
             { //Get all tickets
                 tickets.Add(new Ticket(document));
             }
@@ -26,13 +30,15 @@ namespace DAL
         public List<Ticket> GetTicketsFromSearchQuery(string query)
         {
             List<Ticket> tickets = new List<Ticket>();
-            IMongoCollection<BsonDocument> collection = this.READCollection("Tickets");
 
             //Code for making the index
             //collection.Indexes.DropOne("title_text_description_text");
             //var indexKeys = Builders<BsonDocument>.IndexKeys.Text("Title").Text("Description");
             //collection.Indexes.CreateOneAsync(new CreateIndexModel<BsonDocument>(indexKeys));
-
+            if(query.Trim() == "")
+            {
+                return GetAllTickets();
+            }
             //Split the query at " or "
             string[] orSplits = query.Split(" or ");
             List<FilterDefinition<BsonDocument>> andFilters = new List<FilterDefinition<BsonDocument>>();
@@ -65,6 +71,21 @@ namespace DAL
         {
             IMongoCollection<Ticket> collection = base.mongoClient.GetDatabase("CRUDProject").GetCollection<Ticket>("Tickets");
             collection.InsertOne(ticket);
+        }
+
+        public void UpdateTicket(Ticket updatedTicket)
+        {
+            IMongoCollection<Ticket> collection = base.mongoClient.GetDatabase("CRUDProject").GetCollection<Ticket>("Tickets");
+            FilterDefinition<Ticket> filter = Builders<Ticket>.Filter.Eq(ticket => ticket.Id, updatedTicket.Id);
+            
+            collection.ReplaceOne(filter, updatedTicket);
+        }
+        public void DeleteTicket(Ticket ticket) 
+        {
+            IMongoCollection<Ticket> collection = base.mongoClient.GetDatabase("CRUDProject").GetCollection<Ticket>("Tickets");
+            var filter = Builders<Ticket>.Filter.Eq(t => t.Id, ticket.Id);
+
+            collection.DeleteOne(filter);
         }
     }
 }
