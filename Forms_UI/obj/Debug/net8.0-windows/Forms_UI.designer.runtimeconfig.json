@@ -12,7 +12,7 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\tabee\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\daanp\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\tabee\\.nuget\\packages"
     ],
     "configProperties": {
