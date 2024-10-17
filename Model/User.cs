@@ -18,6 +18,9 @@ namespace Model
         public string Password { get; set; }
         public string Email { get; set; }
         public Roles Role { get; set; }
+        public string Reset_Token { get; set; } // Add reset_token
+        public DateTime? Token_Expiration { get; set; } // Add token_expiration
+
         public User(BsonDocument document)
         {
             this.Id = (ObjectId)document["_id"];
@@ -27,7 +30,18 @@ namespace Model
             this.Password = (string)document["password"];
             this.Email = (string)document["email"];
             this.Role = (Roles)Enum.Parse(typeof(Roles), (string)document["role"]);
+
+            // Check and set reset_token and token_expiration
+            if (document.Contains("reset_token"))
+            {
+                this.Reset_Token = document["reset_token"].ToString();
+            }
+            if (document.Contains("token_expiration"))
+            {
+                this.Token_Expiration = document["token_expiration"].ToNullableUniversalTime();
+            }
         }
+
         public override string ToString()
         {
             return this.Username;

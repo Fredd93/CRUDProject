@@ -36,7 +36,7 @@
             ServiceDeskHeaderLbl = new Label();
             PasswordBox = new TextBox();
             Username = new Label();
-            ForgetMeLabel = new Label();
+            ForgotPassLbl = new Label();
             RememeberMeBox = new CheckBox();
             UsernameBox = new TextBox();
             label2 = new Label();
@@ -98,15 +98,16 @@
             Username.TabIndex = 11;
             Username.Text = "Username";
             // 
-            // ForgetMeLabel
+            // ForgotPassLbl
             // 
-            ForgetMeLabel.AutoSize = true;
-            ForgetMeLabel.ForeColor = SystemColors.Highlight;
-            ForgetMeLabel.Location = new Point(494, 270);
-            ForgetMeLabel.Name = "ForgetMeLabel";
-            ForgetMeLabel.Size = new Size(120, 15);
-            ForgetMeLabel.TabIndex = 16;
-            ForgetMeLabel.Text = "Forgot my password?";
+            ForgotPassLbl.AutoSize = true;
+            ForgotPassLbl.ForeColor = SystemColors.Highlight;
+            ForgotPassLbl.Location = new Point(494, 270);
+            ForgotPassLbl.Name = "ForgotPassLbl";
+            ForgotPassLbl.Size = new Size(120, 15);
+            ForgotPassLbl.TabIndex = 16;
+            ForgotPassLbl.Text = "Forgot my password?";
+            ForgotPassLbl.Click += ForgotPassLbl_Click;
             // 
             // RememeberMeBox
             // 
@@ -156,7 +157,7 @@
             Controls.Add(ServiceDeskHeaderLbl);
             Controls.Add(PasswordBox);
             Controls.Add(Username);
-            Controls.Add(ForgetMeLabel);
+            Controls.Add(ForgotPassLbl);
             Controls.Add(RememeberMeBox);
             Controls.Add(UsernameBox);
             Controls.Add(label2);
@@ -179,7 +180,7 @@
         private Label ServiceDeskHeaderLbl;
         private TextBox PasswordBox;
         private Label Username;
-        private Label ForgetMeLabel;
+        private Label ForgotPassLbl;
         private CheckBox RememeberMeBox;
         private TextBox UsernameBox;
         private Label label2;

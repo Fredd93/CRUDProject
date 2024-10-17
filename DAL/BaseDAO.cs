@@ -6,8 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model;
-
-using MongoDB.Driver;
 using MongoDB.Bson;
 using MongoDB.Driver.Core.Configuration;
 

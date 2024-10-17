@@ -2,16 +2,35 @@ namespace Forms_UI
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm());
+
+            // Check if the application was opened with the reset token link
+            if (args.Length > 0)
+            {
+                try
+                {
+                    // Parse the URL to extract the token
+                    string url = args[0];
+                    var uri = new Uri(url);
+                    var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+                    string token = query.Get("token");  // Extract the token from the query string
+
+                    // Open the ResetPasswordForm and pass the token
+                    Application.Run(new ResetPasswordForm(token));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error processing URL: {ex.Message}");
+                    Application.Run(new LoginForm()); // Fallback to LoginForm
+                }
+            }
+            else
+            {
+                Application.Run(new LoginForm());
+            }
         }
     }
 }
